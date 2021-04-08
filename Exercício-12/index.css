@@ -1,0 +1,88 @@
+
+        :root {
+    --background: #bac5c4;
+    --box: #e7ecef;
+    --title: #e71d36;
+    --text: #011627;
+    --emphasis: #1cacff;
+}
+        input[type=text], select {
+            display: block;
+        }
+        *{
+    font-family: 'Montserrat', sans-serif;
+        }
+        h1 {
+             font-size: 2rem;
+    margin-bottom: 0px;
+    margin-bottom: 6px;
+    color: var(--title);
+        }
+    
+        span {
+            font-size: 10px;
+            color: var(--text);
+
+   
+        }
+    
+        p {
+            font-size: 1.7rem;
+             color: var(--text);
+        }
+    
+        body {
+             background-color: var(--background);
+             margin: 0px;
+        }
+    
+        .questao {
+    background-color: var(--box);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 40px;
+    max-width: 550px;
+    box-shadow: 13px 14px 13px 1px rgba(0, 0, 0, 0.05) ;
+      
+}
+    
+        .questao:hover {
+            background-color: #e0f7fa;
+        }
+    
+        input[type=button] {
+            margin-top: 10px;
+        }
+
+        header {
+        margin-top: 0;
+        background-color: var(--emphasis);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+   
+}
+
+header p {
+    color: var(--box);
+    font-weight: bolder;
+    padding-left: 2rem;
+}
+#corpo{
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+#gender {
+    padding: 1rem;
+    font-size: 1rem;
+}
+h2{
+    color: #131615;
+}
+    
+    

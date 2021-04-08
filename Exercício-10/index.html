@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        display: block;
+    }
+
+    h1 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-bottom: 6px;
+    }
+
+    span {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkblue;
+    }
+
+    p {
+        margin: 0px;
+    }
+
+    body {
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .questao {
+        background-color: #e0f7faa1;
+        padding: 1px 0px 10px 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+
+    }
+    .questao:hover {
+        background-color: #e0f7fa;
+    }
+    input[type=button]{
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div id="corpo">
+        <div class="questao">
+            <h1>Questã 01:<span>Calcular a média ponderada de 3 notas
+                    <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1006"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="media">Resultado: A média das 3 notas foi xx.</p>
+            <label for="nota01">Nota 01:</label>
+            <input type="text" name="nota01" id="nota01">
+            <label for="nota02">Nota 02:</label>
+            <input type="text" name="nota02" id="nota02">
+            <label for="nota03">Nota 03:</label>
+            <input type="text" name="nota03" id="nota03">
+            <input type="button" value="Calcular" onclick="calcular()">
+        </div>
+        <div class="questao">
+            <h1>Questã 02:<span> Senha Fixa <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1114"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="senha">Resultado: xxxxx</p>
+            <label for="senha01">Digite a senha:</label>
+            <input type="password"  name="senha01" id="senha01">
+            <input type="button" value="Calcular" onclick="validar()">
+        </div>
+        <div class="questao">
+            <h1>Questã 03:<span> Intervalo [0,25], [25,50], [50,75], [75,100] <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1037"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="intervalo">Resultado: O valor digita esta no intervalo [xx,xx].</p>
+            <label for="intervalo01">Valor:</label>
+            <input type="text" name= "intervalo01" id="intervalo01">
+            <input type="button" value="Calcular" onclick="verificar()">
+        </div>
+        <div class="questao">
+            <h1>Questã 04:<span> Aumento de Salário <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1048"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="aumento">Resultado: Novo salario: xx.xx, Ganho: xx.xx, Percentual: xx%</p>
+            <label for="aumento01">Salário atual:</label>
+            <input type="text" name="aumento01" id="aumento01">
+            <input type="button" value="Calcular" onclick="porcentagem()">
+        </div>
+        <div class="questao">
+            <h1>Questã 05:<span> Imposto de Renda <a
+                        href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1051"
+                        target="_blank">detalhar</a></span></h1>
+            <p id="">Resultado:Imposto xxxxx</p>
+            <label for="">Renda:</label>
+            <input type="text" id="">
+            <input type="button" value="Calcular">
+        </div>
+    </div>
+
+    <script>
+    function calcular(){
+    var n1 = Number(document.getElementById("nota01").value)  ;
+    var n2 = Number(document.getElementById("nota02").value);
+    var n3 = Number(document.getElementById("nota03").value);
+    var resultado = (n1 + n2 + n3 ) /3;
+
+    document.getElementById("media").innerHTML = "A média das 3 notas foi " +  resultado.toFixed(2) + ".";
+    }
+         function validar(){ 
+        
+        var password = Number(document.getElementById("senha01").value);
+
+;
+        if (password==2002 ){
+        
+            document.getElementById("senha").innerHTML = "Acesso permitido " }
+        
+         else 
+        {
+            document.getElementById("senha").innerHTML= "Senha errada! Try again"   
+        }
+
+    }
+
+
+function verificar(){
+
+    var x =  Number(document.getElementById("intervalo01").value);
+
+    if (x >=0 && x <=25) 
+    {document.getElementById("intervalo").innerHTML = " Intervlo de (0 a 25) " 
+        
+    } else {
+        if (x >=25 && x <=50)
+        { document.getElementById("intervalo").innerHTML = " Intervlo de (25 a 50) " 
+}else
+{
+    if (x >=50 && x <=75)
+        { document.getElementById("intervalo").innerHTML = " Intervlo de (50 a 75) " 
+}else{
+    if (x >=75 && x <=100)
+        { document.getElementById("intervalo").innerHTML = " Intervlo de (75 a 100) " 
+}
+else
+document.getElementById("intervalo").innerHTML= "Fora do Intervalo"
+}
+}
+    }
+}
+
+//function porcentagem(){
+
+//var x = Number(document.getElementById("aumento01").value);
+
+//if (x >= 0 && x <=400) { 
+  //  document.getElementById("aumento").innerHTML = x * 1,5 + 
+
+    
+//} else {if(x >= 400.01 && x <=800){
+
+
+//}else {if(x >= 800.01 && x <=1200){
+
+//}else {if(x >= 1200.01 && x <=2000){
+
+//}else 
+//document.getElementById("intervalo").innerHTML= "Acima de 2000"
+
+//}
+
+//}
+
+    
+//}
+
+//}
+
+</script>
+</body>
+</html>

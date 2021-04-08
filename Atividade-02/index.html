@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css"  media="screen">
+    
+    
+
+        <title>Cadastro de Fúncionarios </title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(96, 224, 37);
+    display: flex;
+    padding: 5px;
+    margin-left: -440px;
+    height: 40px;
+    
+
+    }
+    .logo{
+        color: rgb(255, 255, 251);
+        font-size: 36px;
+        width: 25%;
+        margin-top: 0px;
+    }
+    .logo a{
+        text-decoration: none; color:white;
+    }
+    .icon-menu{
+        width: 75%;
+        text-align: right;
+        
+
+    }
+    .icon-menu svg{
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+    .menu{
+        position:absolute;
+        left: 0;
+        top: 39px;
+        width: 100%;
+        height: 140px;
+        background-color: rgb(163, 236, 120);
+        text-align: center;
+        overflow: hidden;
+      
+
+
+    }
+    .hide{
+        transition: 1s;
+        opacity: 0;
+    }
+
+    .show{
+        transition: 1s;
+        opacity: 1;
+
+    }
+    .menu a{
+        display: inline-block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+
+
+
+#titulo{
+
+    font-family: sans-serif;
+    font-size: 50px;
+    color: rgb(16, 107, 107);
+    margin-left: 25px;
+    margin-top: 50px;
+
+}
+
+#subtitulo{
+
+    font-family: sans-serif;
+    color: rgb(16, 107, 107);
+    margin-left: 100px;
+
+}
+fieldset{
+    border: 0;
+}
+
+    
+    
+
+body{
+
+    background-color: azure;
+    font-family: sans-serif;
+    font-size: 1em;
+    color:rgb(114, 161, 170);
+    margin-left: 32%;
+    margin-top: 0px;
+    justify-content: center;
+    
+    
+}
+input, select, textarea, button{
+
+    border-radius: 5px;
+
+}
+.campo{
+
+    margin-bottom: 1em;
+
+}
+
+ .campo label {
+
+    margin-bottom: 0.5em;
+    color: rgb(42, 68, 102);
+    display: block;
+
+}
+#check
+{
+   
+    margin-bottom: 0.5em;
+    color: rgb(42, 68, 102);
+    display: block; 
+}
+
+fieldset.grupo .campo{
+    float: left;
+    margin-right: 1em;
+
+}
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea{
+    padding: 0.2em;
+    border: 1px solid #595959;
+    box-shadow: 2px 2px 2px rgb(4, 16, 19);
+}   
+
+.campo select option{
+    padding-right: 1em;
+
+}
+.campo input:focus, .campo select:focus, .campo textarea:focus{
+    background-color: #e0e098;
+
+}
+.botao{
+
+    font-size: 1,2em;
+    background-color: rgb(11, 70, 104);
+    border: 5px;
+    margin-bottom: 5em;
+    color:#ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top:90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+.botao:hover{
+    background:rgb(144, 144, 201) ;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+
+
+}
+#check{
+    display: inline-block;}
+
+
+
+    </style>   
+    
+</head>
+<body>
+    <header>
+        <div class="logo">Senai-DF Front-End</div> 
+        <div class="icon-menu"><i class="fas fa-bars"></i></div>
+        <div id="menu" class="menu hide">
+             <a href="#">Home </a>
+             <br>
+             <a href="#">Sobre </a>
+             <br>
+             <a href="#">Contatos </a>
+ 
+         </div>
+      </header>
+
+    <script src="js/all.min.js"></script>
+      <script>
+          var iconMenu = document.querySelectorAll('.icon-menu');
+          iconMenu[0].addEventListener('click',()=>{  
+              let menu = document.getElementById('menu');
+              if(menu.classList.contains('hide')){
+
+              
+              menu.classList.add('show');
+              menu.classList.remove('hide');
+              }else{
+                menu.classList.add('hide');
+              menu.classList.remove('show');
+              }
+
+        });
+      </script>
+    
+    <script>
+        function alertform(texto){
+            alert(texto);
+
+        }
+
+    </script>
+    
+   
+    
+   
+    
+    <div>
+        
+
+
+
+ 
+        <h1 id="titulo">Cadastro de DEVS </h1>
+        <p id="subtitulo"> <strong><i class="fas fa-address-card"></i>
+
+            Complete as suas informações:</strong>  </p>
+        <br>
+
+        <form>
+            <fieldset class="grupo">
+                
+
+                <div class="campo">
+                    <label for="nome"><strong>Nome<strong></label>
+                    <input type="text" name="nome" id="nome" required> 
+                </div>
+                <div class="campo">
+                    <label for="sobrenome"> <strong>Sobrenome</strong></label>
+                    <input type ="text" name='sobrenome' id="sobrenome" required>
+                </div>
+            
+
+            <div class="campo">
+                <label for="email"> <strong> Email</strong></label>
+                <input type= 'email' name ='email' id='email' required>
+            </div>
+        </fieldset>
+            <div class="campo">
+                <label> <strong>De qual lado da aplicação você desenvolve?</strong></label>
+                <label>
+                
+            <label>
+                <input type = 'radio' name = ' devweb' value ='Beckend' checked>Back-end
+            </label>
+            <label>
+                <input type = 'radio' name = ' devweb' value ='Fullstack'>Fullstack
+            </label>
+            <label>
+                <input type = 'radio' name = ' devweb' value ='Frontend '>Front-end
+            </label>
+        </div>
+        <div class="campo">
+                <label for="senioridade"><strong> Senioridade </strong> </label>
+                <select id = 'senioridade'>
+                    <option selected disable value="">Selecione </option> 
+                    <option>Júnior</option> 
+                 <option>Pleno</option>
+                 <option>Senior</option>
+                 </select>      
+        </div>
+        <fieldset class="grupo">
+            <div id="check">
+                <label> <strong>Selecione as tecnoogias que utiliza</strong> </label><br><br>
+                <input type="checkbox" id="Tecnologia1" name="Tecnologia1" value="HTML">
+                <label for="tecnologia1">HTML</label>
+                <input type="checkbox" id="Tecnologia2" name="Tecnologia2" value="CSS">
+                <label for="tecnologia1">CSS</label>
+                <input type="checkbox" id="Tecnologia2" name="Tecnologia2" value="JavaScript">
+                <label for="tecnologia1">JavaScript</label>
+                <input type="checkbox" id="Tecnologia2" name="Tecnologia2" value="PHP">
+                <label for="tecnologia1">PHP</label>
+                <input type="checkbox" id="Tecnologia2" name="Tecnologia2" value="Phyton">
+                <label for="tecnologia1">Phyton</label>
+                <input type="checkbox" id="Tecnologia2" name="Tecnologia2" value="C#">
+                <label for="tecnologia1">C#</label>
+                <input type="checkbox" id="Tecnologia2" name="Tecnologia2" value="Java">
+                <label for="tecnologia1">Java</label>
+            </div>
+        </fieldset>
+<div class="campo">
+    <br>
+    <label><strong>Conte um pouco da sua experiência :</strong> </label>
+    <textarea row="6" style="width:26em" id="experiencia" name="experiencia"></textarea>
+</div>
+
+        <button  class="botao" type="submit">Enviar</button>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>

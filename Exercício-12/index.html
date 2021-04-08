@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="index.css">
+
+
+    <title>Execicio 12</title>
+</head>
+<body>
+    <header>
+        <p>Exercício 12 | Dev Front End SENAI</p>
+        <i class="fab fa-github"></i>
+        <div class="icons">
+          <a href="https://github.com/Emersonpix" target="_blank">
+            <img src= "img/pessoal.svg" alt=""/></a>
+          <a href="https://www.linkedin.com/in/emerson-felisberto-pix/" target="_blank"><img src= "img/Linkedin.svg" alt=""/></a>
+          
+
+
+        </div>
+      </header>
+
+    
+    <body>
+        <div id="corpo">
+            <div class="questao">
+                <h1>Questã 01:<span> <h2>Mostrar os números entre 2 valores</h2>
+                        <a href="detalhesExe12.html"
+                            target="_blank"></a></span></h1>
+                <p id="resultado1">Resultado: Os número entre A e Z são :</p>
+                <label for=" n1">Valor 01:</label>
+                <input type="text" id="n1">
+                <label for="n2">Valor 02:</label>
+                <input type="text" id="n2">
+                <input type="button" onclick="calcular()" value="Executar">
+                <script>
+                    var valor1, valor2;
+                    function calcular(){
+                        valor1=document.getElementById("n1").value;
+                        valor2=document.getElementById("n2").value;
+                        var i;
+                        var conj = "";
+                        for (i=valor1; i<=valor2; i++){
+
+                            conj += i+" , ";
+                            document.getElementById("resultado1").innerHTML = "Os números entre A e Z são: ("+conj+").";
+
+                        }
+                        
+                    }
+
+
+                </script>    
+
+            </div>
+            <div class="questao">
+                <h1>Questã 02:<span> <h2>Lista armazenada </h2><a
+                            href="detalhesExe12.html"
+                            target="_blank"></a></span></h1>
+                <p id="resultado2">Resultado: A lista de itens é :</p>
+                <label for="lista1">Item:</label>
+                <input type="text" id="lista1">
+                <input type="button" onclick="adcionar()" value="Adcionar">
+                <input type="button" onclick="mostrar()" value="Mostrar">
+                <input type="button" onclick="limpar()" value="Limpar">
+                <script>
+                    var lista = [];
+                    function adcionar(){
+                        lista.push(document.getElementById("lista1").value );
+                        console.log(lista);
+                    }
+                    function mostrar(){
+                        document.getElementById("resultado2").innerHTML = "A lista de itens é["+lista+"].";
+                    }
+                    function limpar(){
+                        lista=[];
+                        document.getElementById("resultado2").innerHTML = "A lista de itens é :"
+                        console.log (lista);
+
+                    }    
+
+
+                </script>
+
+                    
+            </div>
+
+            <div class="questao">
+                <h1>Questã 03: <span> <h2>Lista homens e mulheres </h2> <a
+                            href="detalhesExe12.html"
+                            target="_blank"></a></span></h1>
+                <p id="resultado3">Resultado:
+                    <br>Lista de homens :
+                    <br>Lista de mulheres :
+                </p>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome">
+
+                <label for="genero">Sexo:</label>
+                <select name="sexo" id="genero">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <input type="button" onclick="adicionar1()" value="Adcionar">
+                <input type="button" onclick="mostrar1()" value="Mostrar">
+                <input type="button" onclick="limpar1()" value="Limpar">
+<script>
+                var listaHomens, listaMulheres, genero;
+                listaHomens = [];
+                listaMulheres = [];
+                function adicionar1(){
+
+                    genero =document.getElementById("genero").value;
+                    if (genero == "M"){
+                    listaHomens.push(document.getElementById("nome").value);
+                    console.log(listaHomens);
+                    
+                } else {
+                    listaMulheres.push(document.getElementById("nome").value);
+                    console.log(listaMulheres);
+                }
+            }
+                function mostrar1(){
+                    document.getElementById("resultado3").innerHTML ="Lista de Homens ["+listaHomens+"] <br> Lista de Mulheres ["+listaMulheres+"]";
+                };
+                function limpar1(){
+                listaHomens = [];
+                listaMulheres = []
+                document.getElementById("resultado3").innerHTML = "Lista de Homens : <br> Lista de Mulheres:";
+                };
+            
+                
+</script>
+
+            </div>
+    
+        </div>
+
+    
+    
+</body>
+</html>

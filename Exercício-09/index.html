@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        display: block;
+    }
+
+    h1 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+
+    span {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkblue;
+    }
+    p{
+        margin: 0px;
+    }
+</style>
+
+<body>
+    <div class="questao">
+        <h1>Questão 01:<span> Somar 2 valores <a href="https://www.urionlinejudge.com.br/repository/UOJ_1001.html" target="_blank">link da questão</a></span></h1>
+        <p id="questao1">Resultado: A soma dos 2 valores é xx.</p>
+        <label for="">A</label>
+        <input type="text" name="a" id="a">
+        <label for="">B</label>
+        <input type="text" name="b" id="b">
+        <input type="button" value="Calcular" onclick="soma()">
+    </div>
+    <div class="questao">
+        <h1>Questão 02:<span> Calcular o salário de um funcionário <a href="https://www.urionlinejudge.com.br/repository/UOJ_1008.html" target="_blank">link da questão</a></span></h1>
+        <p id="questao2">Resultado: O funcionario xxxxxx vai receber xxx.</p>
+        <label for="nome">Nome Funcionário</label>
+        <input type="text" name="nome" id="nome">
+        <label for="horaValor">Valor Hora</label>
+        <input type="text" name="horaValor" id="horaValor">
+        <label for="horasTrabalhadas">Total de Horas Trabalhado</label>
+        <input type="text" name="horasTrabalhadas" id="horasTrabalhadas">
+        <input type="button" value="Calcular" onclick="calcular()">
+    </div>
+    <div class="questao">
+        <h1>Questão 03:<span> Calcular o consumo médio de um automóvel <a href="https://www.urionlinejudge.com.br/repository/UOJ_1014.html" target="_blank">link da questão</a></span></h1>
+        <p id="questao3">Resultado: O automóvel fez o consumo médio de xxx.</p>
+        <label for="distancia">Distância percorrida</label>
+        <input type="text" id="distancia">
+        <label for="combust">Combustível gasto</label>
+        <input type="text" id="combust">
+        <input type="button" value="calcular" onclick="consumo()">
+    </div>
+</body>
+<script>
+ function soma(){
+var a = Number(document.getElementById("a").value);
+var b = Number(document.getElementById("b").value);
+var Resultado = a + b;
+
+document.getElementById ("questao1").innerHTML= "Resultado: A soma dos 2 valores é " + Resultado;
+
+ }
+ function calcular(){
+
+    var h = Number(document.getElementById("horaValor").value);
+    var t = Number(document.getElementById("horasTrabalhadas").value);
+    var resultado = h * t;
+    var txt = document.getElementById("nome").value;
+   
+
+
+    document.getElementById("questao2").innerHTML = "Resultado: O Funcionário " + txt + " vai receber " + resultado.toFixed(2) + ".";
+
+ }
+
+
+ function consumo(){
+
+var d = Number(document.getElementById("distancia").value);
+var f = Number(document.getElementById("combust").value);
+var resultado = d / f;
+
+document.getElementById("questao3").innerHTML = "Resultado: O automóvel fez o consumo médio de " + resultado + "km/l";
+}
+
+</script>
+
+</script>
+
+</html>

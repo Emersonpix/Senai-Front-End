@@ -1,0 +1,86 @@
+
+    input{
+        display: block;
+        border-radius: 5;
+        box-shadow: black;
+        padding:0px;
+    }
+    footer {
+        background-color: #666;
+        padding-top: 5em;
+        padding-bottom: 10px;
+        border-top: 5px solid #3381F3;
+    }
+    footer img{
+        margin-left:500px ;
+        margin-top: auto;
+        margin-right: 40px;
+        width: 200px;
+    }
+    footer span, footer a {
+
+        color: #666;
+        font-weight: 400;
+    }
+
+    header {
+        font-size: 40px;
+        margin-top: 5px;
+        background-color: rgb(156, 167, 197);
+        text-align: center;
+        padding: 0px;
+        display:grid;
+        align-items: center;
+        background-image: url("img/logo-senai.png");
+        background-repeat: no-repeat ;
+        
+   }
+   .header {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+
+
+
+}
+    h1 {
+        color: rgb(71, 157, 255);
+        font-size: 30px;
+        margin-bottom: 15px;
+        margin-right: 20px;
+    }
+
+    span {
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 123, 139);
+    }
+
+
+.questao{
+    
+    padding: 10px;
+    margin: 1rem;
+    border-radius: 40px;
+    max-width: 1000px;
+    box-shadow: 13px 14px 13px 1px ;
+    padding: 50px;
+
+
+  
+}
+div{
+    display: block;
+    background-color: rgb(224, 234, 235);
+    
+
+}
+.corpo{
+    display: flex;
+    
+}
+a:link {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }

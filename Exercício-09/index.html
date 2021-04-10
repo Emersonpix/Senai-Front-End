@@ -6,32 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <header>
+       <p class="header"> Execício 09: Front End-Senai </p>    
+    </header>
 </head>
-<style>
-    input {
-        display: block;
-    }
 
-    h1 {
-        font-size: 16px;
-        margin-bottom: 0px;
-        margin-top: 20px;
-    }
-
-    span {
-        font-size: 13px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: darkblue;
-    }
-    p{
-        margin: 0px;
-    }
-</style>
 
 <body>
+   
+
+    <div class="corpo">
     <div class="questao">
-        <h1>Questão 01:<span> Somar 2 valores <a href="https://www.urionlinejudge.com.br/repository/UOJ_1001.html" target="_blank">link da questão</a></span></h1>
-        <p id="questao1">Resultado: A soma dos 2 valores é xx.</p>
+        <h1>Questão 01:<span> Somar 2 valores: </h1>
+        <p id="questao1">Resultado: A soma dos 2 valores é:</p>
         <label for="">A</label>
         <input type="text" name="a" id="a">
         <label for="">B</label>
@@ -39,8 +28,8 @@
         <input type="button" value="Calcular" onclick="soma()">
     </div>
     <div class="questao">
-        <h1>Questão 02:<span> Calcular o salário de um funcionário <a href="https://www.urionlinejudge.com.br/repository/UOJ_1008.html" target="_blank">link da questão</a></span></h1>
-        <p id="questao2">Resultado: O funcionario xxxxxx vai receber xxx.</p>
+        <h1>Questão 02:<span> Calcular o salário de um funcionário: </h1>
+        <p id="questao2">Resultado: O funcionario ___ vai receber R$: __ </p>
         <label for="nome">Nome Funcionário</label>
         <input type="text" name="nome" id="nome">
         <label for="horaValor">Valor Hora</label>
@@ -50,14 +39,53 @@
         <input type="button" value="Calcular" onclick="calcular()">
     </div>
     <div class="questao">
-        <h1>Questão 03:<span> Calcular o consumo médio de um automóvel <a href="https://www.urionlinejudge.com.br/repository/UOJ_1014.html" target="_blank">link da questão</a></span></h1>
-        <p id="questao3">Resultado: O automóvel fez o consumo médio de xxx.</p>
+        <h1>Questão 03:<span> Calcular o consumo médio de um automóvel:</span> </h1>
+        <p id="questao3">Resultado: O automóvel fez o consumo médio de __:</p>
         <label for="distancia">Distância percorrida</label>
         <input type="text" id="distancia">
         <label for="combust">Combustível gasto</label>
         <input type="text" id="combust">
-        <input type="button" value="calcular" onclick="consumo()">
+        <input type="button" value="Calcular" onclick="consumo()">
     </div>
+</div>
+<footer>
+
+    <div class="wrapper">
+        <div class="footer-box" >
+            <div class="company-footer">
+                    <img src="img/log-SENAI-EXTERNA.jpg" alt="SenaI-DF">
+                    
+            </div>
+           
+
+        </div>
+        <div class="footer-box" >
+            <div class="footer-box">
+                <span>Redes Socias: </span>
+                <ul class="footer-list">
+                    <li> <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/emerson-felisberto-pix/" target="_blank"> <span>Linkedin</span></a>
+                    
+                    
+                    </li>
+                    <li><i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/emersonpix/" target="_blank"> <span>Instagram</span></a>
+                    
+                   
+                    </li>
+                    <li>
+                        <i class="fab fa-facebook-square"></i>
+                        <a href="https://www.facebook.com/emerson.felisberto.9/" target="_blank"><span>Facebook </span></a>
+                        
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+        
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 <script>
  function soma(){
@@ -77,7 +105,7 @@ document.getElementById ("questao1").innerHTML= "Resultado: A soma dos 2 valores
    
 
 
-    document.getElementById("questao2").innerHTML = "Resultado: O Funcionário " + txt + " vai receber " + resultado.toFixed(2) + ".";
+    document.getElementById("questao2").innerHTML = "Resultado: O Funcionário " + txt + " vai receber R$ " + resultado.toFixed(2) + ".";
 
  }
 
@@ -94,5 +122,6 @@ document.getElementById("questao3").innerHTML = "Resultado: O automóvel fez o c
 </script>
 
 </script>
+
 
 </html>

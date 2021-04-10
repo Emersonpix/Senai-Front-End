@@ -14,9 +14,9 @@
         }
         h1 {
              font-size: 2rem;
-    margin-bottom: 0px;
-    margin-bottom: 6px;
-    color: var(--title);
+             margin-bottom: 0px;
+            margin-bottom: 6px;
+            color: var(--title);
         }
     
         span {

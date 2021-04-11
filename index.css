@@ -1,0 +1,17 @@
+body {
+   
+
+}
+div{
+    text-align: center;
+    
+}   
+ul li{
+  display:flow-root;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+
+
+}

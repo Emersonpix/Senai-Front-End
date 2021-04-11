@@ -16,12 +16,14 @@
         margin-top: auto;
         margin-right: 40px;
         width: 300px;
+        display: flex;
     }
     footer span, footer a {
 
         color: #666;
         font-weight: 400;
         font-size: 15px;
+        width: 300px;
     }
     
 
@@ -32,15 +34,17 @@
         text-align: center;
         padding: 0px;
         display:grid;
+        background-repeat: no-repeat ;
+        width: 100%;
         align-items: center;
         background-image: url("img/logo-senai.png");
-        background-repeat: no-repeat ;
+        
         
    }
    .header {
     color: white;
     font-family: "Times New Roman", Times, serif;
-
+    width: 100%;
 
 
 }
@@ -86,3 +90,24 @@ a:link {
   a:hover {
     text-decoration: underline;
   }
+  
+  @media screen and  (min-width: 768px) {
+      .corpo {
+          flex-direction: row;
+          justify-content: space-around;
+
+      }
+
+      
+
+      
+footer{
+    height: 250px;
+    height: 30vh;
+    justify-content: center;
+    min-height: 250px;
+
+}
+  }
+      
+  

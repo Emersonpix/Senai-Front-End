@@ -16,3 +16,19 @@ ul li{
 
 
 }
+.footer-box{
+    
+    background-color: antiquewhite;
+  
+    padding: 15px;
+    display:list-item;
+   
+    
+}
+ .Rede{
+    text-decoration: rgb(119, 137, 187);
+    font-size: 50px;
+
+}
+
+ 

@@ -1,0 +1,28 @@
+*{margin: 0; padding: 0; font-size: 100%; border:none; outline: none;
+     font-weight:300; box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body{background-color: #f5f5f5;}
+a{text-decoration: none;  cursor: pointer; }
+img {max-width: 100%; }
+.header{width: 100%; padding: 3% 4%;}
+header{ border-radius: 10px; background-color: rgb(118, 152, 216); display: flex; margin: 0; padding: 10px;}
+.title{font-size: 40px; float: unset; margin-left: 0;}
+.sites{display: flex; padding:0 ;  gap: 1rem; float:none; margin-left:150px; }
+.container{display:flex;}
+h1{font-size: 40px; text-align: center;}
+p{ text-align: center;}
+.button { text-align: center;
+    display:grid;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin: 1rem;}
+.button a{
+    
+    background-color:  rgb(118, 152, 216);
+    padding: 50px;
+    border-radius: 56px;
+    box-shadow: 1px 5px 23px 1px rgba(0, 0, 0, 0.2);
+}
+ 
+

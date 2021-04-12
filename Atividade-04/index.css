@@ -15,13 +15,7 @@ p{ text-align: center;}
 .button { text-align: center;display:grid;font-size: 1.5rem;gap: 1rem;margin: 1rem;}
 .button a{background-color:  rgb(118, 152, 216);padding: 50px;border-radius: 56px;
 box-shadow: 1px 5px 23px 1px rgba(0, 0, 0, 0.2);}
- a:hover{
-    color: #020000;
-    font-weight: bolder;
-    background-color: #a8af3c;
-
-
-} 
+ a:hover{color: #020000; font-weight: bolder; background-color: #a8af3c;} 
 
     @media screen and (max-width: 500px) {
         .title, h1 {

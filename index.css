@@ -31,4 +31,6 @@ ul li{
 
 }
 
- 
+img {max-width: 100%; }
+.header{width: 100%; padding: 3% 4%;}
+header{ border-radius: 10px; background-color: rgb(118, 152, 216); display: flex; margin: 0; padding: 10px;}

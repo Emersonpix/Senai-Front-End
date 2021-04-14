@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+   
+
+    <title>Centro Cirúrgico</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Painel Centro Cirúrgico</h1>
+        <div class="row">
+            <div class="form-group col-sm-6"> 
+                <label for="nome">Nome do paciente:</label>
+                <input  class="form-control" type="text" id="nome" name="nome" >
+ 
+            </div>
+            <div class="form-group col-sm-3"> 
+                <label for="status">Status:</label>
+                <select class="form-control"  name="status" id="status">
+                    <option value="operatorio">Pré Operatorio</option>
+                    <option value="sala-cirurgia"> Sala de Cirúrgia</option>
+                    <option value="recuperacao"> Sala de recuperação</option>
+                    <option value="trasnferido">Transferido</option>
+                </select>
+ 
+            </div>
+            <div class="form-group col-sm-3"> 
+                <label for="local">Local:</label>
+                <input  class="form-control" type="text" id="local" name="local" >
+ 
+            </div>
+
+            
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-3"> 
+                <label for="horaInicio">Hora Início:</label>
+                <input  class="form-control" type="time" id="horaInicio" name="horaInicio" >
+ 
+            </div>
+            <div class="form-group col-sm-3"> 
+                <label for="inicioPrevisto">Início Previsto:</label>
+                <input  class="form-control" type="time" id="inicioPrevisto" name="inicioPrevisto" >
+ 
+            </div>
+            <div class="form-group col-sm-3"> 
+                <label for="fimPrevisto">Fim Previsto:</label>
+                <input  class="form-control" type="time" id="fimPrevisto" name="fimPrevisto" >
+ 
+            </div>
+            <div class="form-group col-sm-3"> 
+                <label for="saidaPrevisto">Saída Previsto:</label>
+                <input  class="form-control" type="time" id="saidaPrevisto" name="saidaPrevisto" >
+ 
+            </div>
+
+        </div>
+        <div class="row">
+         <div class="col">
+                <button class="btn btn-success">Novo</button>
+                <button class="btn btn-primary" onclick="gravar()">Gravar</button>
+                <button class="btn btn-danger">Apagar </button>
+            </div>
+       
+        </div>
+        <br>
+        <table class="table table-hover">
+            <thead>
+                <th width="40%">Nome do Paciente</th>
+                <th width="30%">Status</th>
+                <th width="10%">Hora <br> Início </th>
+                <th width="10%">Início <br> Previsto</th>
+                <th width="10%"> Fim <br> Previsto</th>
+                <th width="10%">Saída <br> Prevista</th>
+            </thead>
+            <tbody id="bodyTable">
+            
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

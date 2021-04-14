@@ -7,9 +7,46 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Exemplo Api-Cep</title>
 </head>
-<body>  <div class="container text-center">
+<body> 
+    <script src="/Exemplo-Api/script.js"></script>
+    <div class="container ">
 
-    <h1>Exemplo de Api de CEP </h1>
+    <h1 class="text-center">Exemplo de Api de CEP </h1>
+    
+    <form action="">
+    <div class="form-group">
+    <label for="cep">CEP:</label>
+    <input  id="cep" name="cep" type="text" class ="form-control" onblur="searchAddress(this)" value="">
+
+</div>
+<div class="form-group">
+    <label for="logradouro">Logradouro:</label>
+    <input  id="logradouro" name="logradouro" type="text" class ="form-control">
+
+</div>
+<div class="form-group">
+    <label for="complemento">Complemento:</label>
+    <input  id="complemento" name="complemento" type="text" class ="form-control">
+
+</div>
+
+<div class="form-group">
+    <label for="bairro">Bairro:</label>
+    <input  id="bairro" name="bairro" type="text" class ="form-control">
+
+</div>
+<div class="form-group">
+    <label for="localidade">Localidade:</label>
+    <input  id="localidade" name="localidade" type="text" class ="form-control">
+
+</div>
+<div class="form-group">
+    <label for="número">Número:</label>
+    <input  id="número" name="número" type="text" class ="form-control">
+
+</div>
+<button class="btn btn-info">Buscar</button>
+    </form>
 </div>
 
  

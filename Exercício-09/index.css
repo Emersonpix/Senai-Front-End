@@ -16,7 +16,7 @@
         margin-top: auto;
         margin-right: 40px;
         width: 300px;
-        display: flex;
+       
     }
     footer span, footer a {
 
@@ -33,7 +33,7 @@
         background-color: rgb(156, 167, 197);
         text-align: center;
         padding: 0px;
-        display:grid;
+        
         background-repeat: no-repeat ;
         width: 100%;
         align-items: center;

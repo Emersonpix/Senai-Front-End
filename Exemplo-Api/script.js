@@ -6,7 +6,7 @@ function acessarAPI(link,executarFuncao){
     xhtml.onreadystatechange = function(){
       if ( this.readyState == 4 &&
         this.status ==  200 ) {
-            console.log(link);
+          
             executarFuncao(this.responseText);
 
         }

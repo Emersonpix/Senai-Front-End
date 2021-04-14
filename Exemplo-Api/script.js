@@ -13,7 +13,7 @@ function acessarAPI(link,executarFuncao){
         if ( this.readyState == 4 &&
             this.status == 0) {
              
-            
+                
 
     document.getElementById("logradouro").value = '';
     document.getElementById("complemento").value = '';

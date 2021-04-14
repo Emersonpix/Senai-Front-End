@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div id="jogo">
+    <h1>Desafio Pedra-Papel-Tesoura</h1>
+    
+    <div id="campo">
+    <img src="img/pedra.png" id="pedra" onclick="escolher(this)" alt=""> 
+    <img src="img/papel.png" id="papel" onclick="escolher(this)" alt=""> 
+    <img src="img/tesoura.png" id="tesoura" onclick="escolher(this)" alt="">
+    <img src="img/pc.jpg"  id="pc" alt="">      
+    </div>
+    <div id="placar"> 
+
+    </div>
+    <img id="jogar" src="img/play.png" alt=" " onclick="jogar()" height="60">
+</div>
+<script src="js/script.js"> </script>
+</body>
+</html>

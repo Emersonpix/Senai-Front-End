@@ -25,23 +25,15 @@ div{
 }   
 
 ul li{
-  display:flow-root;
+  display:center;
   align-items: center;
-  flex-direction: column;
-  padding: 0;
+  flex-direction:row;
+  padding:1rem;
 
 
 
 }
-.footer-box{
-    
-    background-color: antiquewhite;
-    
-    padding: 15px;
-    display:list-item;
-   
-    
-}
+
  .Rede{
     text-decoration: rgb(119, 137, 187);
     font-size: 50px;
@@ -49,6 +41,14 @@ ul li{
 }
 a{
     text-decoration: none;
+}
+
+.footer-box{
+    border-radius: 5px;
+}
+.footer-list{
+    display: inline;
+
 }
  
 
@@ -92,10 +92,11 @@ a{
             </div>
            
 
-        </div>
+        </div >
+        <div class="container texte-center">
         <div class="footer-box" >
-            <div class="footer-box">
-               <h1 class="Rede"> Redes Socias:</h1> 
+          
+               <h1 class="Rede">Redes Socias:</h1> 
                 <ul class="footer-list">
                     <li> <i class="fab fa-linkedin-in"></i>
                         <a href="https://www.linkedin.com/in/emerson-felisberto-pix/" target="_blank"> <span>/Linkedin</span></a>
@@ -124,6 +125,7 @@ a{
 
         
     </div>
+</div>
 </footer>
 </body>
 </html>

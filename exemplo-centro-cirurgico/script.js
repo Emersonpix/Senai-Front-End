@@ -21,21 +21,16 @@ function gravar(){
 
 localStorage.setItem("lsPessoa" , JSON.stringify(lsPessoa))
 uptadeTable()
-
-document.getElementById("formulario").reset();
-
-
+novo();
 }
 function uptadeTable(){
-    console.log(uptadeTable)
 
 var lsPessoa = JSON.parse (localStorage.getItem("lsPessoa"));
 var bodyTable = "";
 for( i in lsPessoa){
     bodyTable += `<tr onclick="editar(${i})"> `;
     bodyTable += `<td> ${lsPessoa[i].nome}</td>`;
-    bodyTable += `<td> ${lsPessoa[i].status}</td>`;
-   // bodyTable += `<td> ${lsPessoa[i].local}</td>`;
+    bodyTable += colunaStatus(lsPessoa[i].status, lsPessoa[i].local);
     bodyTable += `<td> ${lsPessoa[i].horaInicio}</td>`;
     bodyTable += `<td> ${lsPessoa[i].inicioPrevisto}</td>`;
     bodyTable += `<td> ${lsPessoa[i].fimPrevisto}</td>`;
@@ -46,6 +41,38 @@ for( i in lsPessoa){
 document.getElementById("bodyTable").innerHTML = bodyTable;
 
 }
+
+function colunaStatus(status, local) {
+    var retorno = "<td &class>&status &local</td>";
+    local = (local == "") ? "" : `(${local})`;
+    retorno = retorno.replace("&local", local);
+    switch (status) {
+        case "operatorio": {
+            retorno = retorno.replace("&class", "class='table-warning'")
+                .replace("&status", "Pré Operatório");
+            break;
+        }
+        case "sala-cirurgia": {
+            retorno = retorno.replace("&class", "class='table-danger'")
+                .replace("&status", "Em sala de Cirurgia");
+            break;
+        }
+        case "recuperacao": {
+            retorno = retorno.replace("&class", "class='table-success'")
+                .replace("&status", "Sala de Recuperação");
+            break;
+        }
+        case "transferido": {
+            retorno = retorno.replace("&class", "class='table-primary'")
+                .replace("&status", "Transferido");
+            break;
+        }
+    }
+    return retorno;
+}
+
+
+
 
 function editar(id){
 
@@ -62,10 +89,26 @@ function editar(id){
 
 }
 
-function apagar (){
-    var id= document.getElementById("id").value;
+function apagar() {
+    var id = document.getElementById("id").value;
+    if (id == '') {
+        return;
+    }
+    if (confirm("Você realmente deseja apagar esse registro?")) {
+        lsPessoa.splice(id, 1);
+        localStorage.setItem("lsPessoa", JSON.stringify(lsPessoa));
+        uptadeTable();
+        novo();
+    }
+}
 
-    lsPessoa.splice(id,1);
+    
 
+
+function novo(){
+document.getElementById("formulario").reset();
+document.getElementById("id").value = "";
 }
 uptadeTable()
+
+

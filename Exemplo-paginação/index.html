@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo Paginação</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -34,6 +35,27 @@
 
         pgAtual = 0;
 
+        function trocar(nLinha, bt) {
+            let auxiliar;
+            nLinha = nLinha - 1;
+            auxiliar = lsAlunos[nLinha];
+            if (bt == 's' && nLinha != 0) {
+                lsAlunos[nLinha] = lsAlunos[nLinha - 1];
+                lsAlunos[nLinha - 1] = auxiliar;
+            }
+            else {
+
+                if (nLinha < 19) {
+
+                    lsAlunos[nLinha] = lsAlunos[nLinha + 1];
+                    lsAlunos[nLinha + 1] = auxiliar;
+
+                }
+
+            }
+            carregarTabela(document.getElementById("pgAt").value);
+        }
+
         function carregarTabela(pg) {
             tamanhoArray = Math.ceil((lsAlunos.length) / 5);
             if (pg <= 0 || pg > tamanhoArray) {
@@ -47,7 +69,10 @@
             for (i = inicio; i < fim; i++) {
                 // console.log(lsAlunos[i])
                 if (lsAlunos[i] == undefined) break;
-                txLinhas += `<tr><td>${Number(i) + 1}</td><td>${lsAlunos[i]}</td></tr>`;
+                txLinhas += `<tr><td>${Number(i) + 1}</td><td>${lsAlunos[i]}</td><td> <span onclick= "trocar(${Number(i) + 1}, 's')">&uArr;</span>
+               <span onclick= "trocar(${Number(i) + 1}, 'd')"> &dArr; </span></td></tr>`;
+
+
             }
             document.getElementById("corpoTabela").innerHTML = txLinhas;
             itemLista = document.getElementById("pg-" + pg);

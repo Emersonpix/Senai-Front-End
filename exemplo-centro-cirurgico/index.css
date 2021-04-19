@@ -1,3 +1,10 @@
 tbody{
     cursor: pointer;
 }
+a{
+    color: white;
+}
+a:hover{ 
+    color: rgb(7, 4, 4);
+    text-decoration: none;
+}

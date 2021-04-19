@@ -1,14 +1,16 @@
 var lsPessoa = JSON.parse (localStorage.getItem("lsPessoa"));
 function gravar(){
+
     var pessoa={};
 
-    pessoa.nome= document.getElementById("nome").value;
+    pessoa.nome= document.getElementById("nome").value.toUpperCase();;
     pessoa.status= document.getElementById("status").value;
     pessoa.local= document.getElementById("local").value;
     pessoa.horaInicio= document.getElementById("horaInicio").value;
     pessoa.inicioPrevisto= document.getElementById("inicioPrevisto").value;
     pessoa.fimPrevisto= document.getElementById("fimPrevisto").value;
     pessoa.saidaPrevisto= document.getElementById("saidaPrevisto").value;
+
      var id= document.getElementById("id").value;
 
     if (id == ""){

@@ -109,6 +109,8 @@ function novo(){
 document.getElementById("formulario").reset();
 document.getElementById("id").value = "";
 }
+
+
 uptadeTable()
 
 

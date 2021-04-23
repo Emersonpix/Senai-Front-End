@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
-    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anton|Cinzel Decorative' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet'>
     <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
     <title>Disk Mongly</title>
@@ -19,6 +21,13 @@
 } 
 
 
+.conteudo{
+   
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
     h1{
         background-color : rgb(224, 96, 10);
         padding: 25px;
@@ -27,6 +36,8 @@
         font-family: 'Anton';font-size: 30px;
         letter-spacing: 5px;
         padding-left: 12%;
+       border-bottom: red 10px;
+       position: relative;
 
         
 
@@ -37,45 +48,175 @@
        padding-right: 15px;
         padding-left:10px; 
    }
-#enviar{
+
+
+
+#hotdog{
+   font-size: 25px;
+   background-color: red;
+   border: none;
+   padding: 20px;
+   cursor: none;
+}
+h2{
+    border-left: solid red 5px;
+    border-bottom: solid red 2px;
+    padding-left :3px;
+    font-size: 22px;
+    font-family:'Candal';
+    position: relative;
+
+}
+h2 span{
+
+    position:absolute;
+    right: 2px;
+    font-family: 'Cinzel Decorative';
+}
+
+.produto{
+    background-color: rgb(240, 237, 64);
+
+}
+.cod-produto{
+    background-color: black;
+    color:red;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'anton';
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+.valor-produto{
+    background-color:white;
+    color:red;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'anton';
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+}
+.descricao{
+    padding-left: 0px;
+    text-align: justify;
+    font-size: 18px;
+    /* font-family: Calistoga; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-transform: lowercase; */
+    text-transform: initial;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 3px;
+    display: flex !important;
+    align-items: center !important;
+}
+.add-produto {
+    min-height: 25px;
+    background-color: #180f0f;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+    align-items: center !important;
+    display: inline;
+
+
+}
+.botao {
+    font-family: 'Alfa Slab One';
+    background-color: rgba(255, 217, 0, 1);
+    display: inline-block;
+    font-size: 20px;
+    width: 25px;
+    right: 0;
+    border: none;
+}
+@media (min-width: 500px) {
+
+#enviar {
+    position: fixed;
+    top: 4px;
+    right: 11%;
+    text-align: center;
     background-color: rgb(35, 202, 29);
     color: white;
-    position: fixed;
-    right: 12%;
-    top: 20px;
     font-family: 'Anton';font-size: 30px;
-    padding:5px;
-   letter-spacing: 2px;
-   padding-left: 5px;
-   padding-right: 5px;
-   border: none;
-   cursor: pointer;
-   
+    letter-spacing: 3px;
+    z-index: 2;
+    cursor: pointer;
+    padding-left: 14px;
+    padding-right: 14px;
 }
-.conteudo img{
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-color: yellow;
+@media (max-width: 450px) {
+    #enviar {
+        bottom: 0px;
+        background-color: rgb(35, 202, 29);
+        color: white;
+        left: 0px;
+        top:90%;
+        width: 100%; 
+        padding-right: 14px;
+        position: fixed;
+        text-align: center;
+         padding-bottom: 13px;
+         padding-top:5px ;
+
+   }   
 
 }
-.hamburguer{
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-color:yellow;
+}
+.imagem{
+    float:right;
 
 }
 
 
 
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 500px) {
     #enviar{
+        background-color: rgb(35, 202, 29);
+        color: white;
         bottom: 0px;
         left: 0px;
-        top: 80%;
+        top:90%;
+        width: 100%; 
+        padding-right: 14px;
+        position: fixed;
+        text-align: center;
+         padding-bottom: 13px;
+         padding-top:5px ;
+         font-family: 'anton';
+         letter-spacing: 3px;
+         font-size: 25px;
   }
+  h1{
+      padding-left: 2%;
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-align: center;
+  }
+  .conteudo{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+h2 span{
+
+position:absolute;
+right: 2px;
+font-family: 'Cinzel Decorative';
+font-size: 10px;
+}
+
+.imagem{
+
+min-width:100%;
+ height:auto;
+}
 }
 </style>
 
@@ -83,27 +224,435 @@
 <body>
     <header>
         <div class="headerWhrapper">
-        <h1> <span>MONGLY</span>HOT-DOG <button id="enviar"> <i class="fab fa-whatsapp"></i>ENVIAR</button> </h1>
+        <h1> <span>MONGLY</span>HOT-DOG</h1>
         
     </div>
     </header>
-               <div class="conteudo">
-                 
-                      <div class="hotdog"> <img src="img/hotdog.png" alt="">
-                      </div>
-                     
-                  <div class="hamburguer">
-                      <img src="img/hamburguer1.jpg" alt="">
-                  </div>
-                  <div class="comboos">
-                    <img src="img/img1.jpg" alt="">
-                  </div>
+    
+    <div class="container-sm " id="conteudo">
 
+            <div class="conteudo">
+                <h2> CARDÁPIO HOT-DOG <span> TRADICIONAL E CHAPA</span></h2>
+                <div class="imagem">
+                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="200" height="200">    
+            </div>
+        <div class="row linha item">
+            
+                <div class="col-2" class="produto"> 
+                    <div class="cod-produto">
+                        01  
+                </div>
+                <div class="valor-produto">
+                    R$ 9,00
+                </div>
+            </div>
+                <div class=" col-10 descricao">
+                    <p>  Dog Tradicional:<br> Pão de leite ninho, molho, queijo, milho, pasta e batata palha.</p>
+                </div>    
+        </div>
+    </div>
+          
                </div>
-               <div>
-                  
-               </div>
+               <div class=" row add-produto">
+                <div class="col-8" style="position: relative;">
+                    <span class="parcial">
+                        R$ 0.0 (x0)
+                    </span>
+                    <span class=" botoes">
+                        <button class="botao bt-soma">+</button>
+                        <button class="botao bt-subtrai">-</button>
+                    </span>
+                </div>
+                
+            </div>
+            
+ </div>
+ <div class="container-sm " id="conteudo">
 
+    <div class="conteudo">
+        
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                02 
+        </div>
+        <div class="valor-produto">
+            R$ 10,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p>  Dog Duplo:<br> Pão de leite ninho, 2 salsicha, molho, queijo, milho, pasta e batata palha.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container-sm " id="conteudo">
+
+    <div class="conteudo">
+     
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                03
+        </div>
+        <div class="valor-produto">
+            R$10,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p> Dog na chapa :<br> Pão de leite ninho, molho, queijo, milho, bacon,  pasta e batata palha.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container-sm " id="conteudo">
+
+    <div class="conteudo">
+       
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                04
+        </div>
+        <div class="valor-produto">
+            R$ 12,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p>  Dog Mixto:<br> Pão de leite ninho, salsicha, queijo, milho, ovo, bacon, pasta e batata palha.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container-sm " id="conteudo">
+
+    <div class="conteudo">
+       
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                05
+        </div>
+        <div class="valor-produto">
+            R$ 12,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p>  Dog de Frango:<br> Pão de leite ninho, frango, queijo, milho, pasta, catupiry  e batata palha.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container-sm " id="conteudo">
+    
+    <div class="conteudo">
+        <h2> CARDÁPIO HAMBÚRGUER <span> Deus é fiel</span></h2>
+        <div class="imagem">
+            <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="200" height="200">    
+        </div>
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                06 
+        </div>
+        <div class="valor-produto">
+            R$ 9,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p>  X-Burguer:<br> Pão, hambúrguer,queijo, milho, batata palha, tomate e alface.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container-sm " id="conteudo">
+
+    <div class="conteudo">
+        
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                07
+        </div>
+        <div class="valor-produto">
+            R$ 10,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p>  X-Salada:<br> Pão, hambúrguer,queijo,presunto, ovo, tomate e alface.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container-sm " id="conteudo">
+
+    <div class="conteudo">
+        
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                08
+        </div>
+        <div class="valor-produto">
+            R$ 12,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p>  X-Bacon:<br> Pão, hambúrguer,queijo,bacon,cebola, tomate e alface.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+
+<div class="container-sm " id="conteudo">
+
+    <div class="conteudo">
+        
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                09
+        </div>
+        <div class="valor-produto">
+            R$ 17,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p>  X-Brutos:<br> Pão,2 hambúrguer,queijo,bacon, salsicha, ovo, queijo, persunto, cheddar, tomate e alface.</p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container-sm " id="conteudo">
+
+    <div class="conteudo">
+        
+<div class="row linha item">
+        <div class="col-2" class="produto"> 
+            <div class="cod-produto">
+                10
+        </div>
+        <div class="valor-produto">
+            R$ 18,00
+        </div>
+    </div>
+        <div class=" col-10 descricao">
+            <p> BURGÃO:<br> Pão,hambúrguer,frango,queijo,bacon, salsicha, ovo, queijo, persunto, cheddar,calabresa ,banana, milho,batata palha,tomate e alface </p>
+        </div>    
+</div>
+</div>
+  
+       </div>
+       <div class=" row add-produto">
+        <div class="col-8" style="position: relative;">
+            <span class="parcial">
+                R$ 0.0 (x0)
+            </span>
+            <span class=" botoes">
+                <button class="botao bt-soma">+</button>
+                <button class="botao bt-subtrai">-</button>
+            </span>
+        </div>
+        
+    </div>
+    
+</div>
+
+    <div class="container-sm " id="conteudo">
+
+        <div class="conteudo">
+            <h2> Refigerantes e Sucos <span> Deus é fiel</span></h2>
+            <div class="imagem">
+                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="200" height="200">    
+            </div>
+    <div class="row linha item">
+            <div class="col-2" class="produto"> 
+                <div class="cod-produto">
+                    11
+            </div>
+            <div class="valor-produto">
+                R$ 5,00
+            </div>
+        </div>
+            <div class=" col-10 descricao">
+                <p>  LATA:<br> Coca-cola e Guaraná.</p>
+            </div>    
+    </div>
+    </div>
+      
+           </div>
+           <div class=" row add-produto">
+            <div class="col-8" style="position: relative;">
+                <span class="parcial">
+                    R$ 0.0 (x0)
+                </span>
+                <span class=" botoes">
+                    <button class="botao bt-soma">+</button>
+                    <button class="botao bt-subtrai">-</button>
+                </span>
+            </div>
+            
+        </div>
+    </div>
+   
+</div>
+
+ <div class="container-sm " id="conteudo">
+
+     <div class="conteudo">
+ <div class="row linha item">
+         <div class="col-2" class="produto"> 
+             <div class="cod-produto">
+                 12
+         </div>
+         <div class="valor-produto">
+             R$ 5,00
+         </div>
+     </div>
+         <div class=" col-10 descricao">
+             <p>  Suco em lata:<br> Vários Sabores.</p>
+         </div>    
+ </div>
+ </div>
+   
+        </div>
+        <div class=" row add-produto">
+         <div class="col-8" style="position: relative;">
+             <span class="parcial">
+                 R$ 0.0 (x0)
+             </span>
+             <span class=" botoes">
+                 <button class="botao bt-soma">+</button>
+                 <button class="botao bt-subtrai">-</button>
+             </span>
+         </div>
+         
+     </div>
+         <div>
+<button id="enviar"> <i class="fab fa-whatsapp"></i>ENVIAR</button>
+</div>
     <script src="js/script.js"></script>
 </body>
+
+
 </html>

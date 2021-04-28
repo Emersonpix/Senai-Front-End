@@ -26,13 +26,14 @@
         }
 
 
-        .conteudo {
+        #conteudo {
 
             padding-left: 12px;
             padding-right: 12px;
-            
-          
-            
+            margin-top: 10px;
+
+
+
         }
 
 
@@ -45,7 +46,7 @@
             font-size: 30px;
             letter-spacing: 5px;
             padding-left: 12%;
-            border-bottom: red 10px;
+            border-bottom: solid rgb(15, 5, 5) 5px;
             position: relative;
 
 
@@ -89,7 +90,7 @@
         .produto {
             background-color: rgb(240, 237, 64);
             cursor: pointer;
-            
+
 
         }
 
@@ -102,6 +103,7 @@
             font-family: 'anton';
             padding-bottom: 4px;
             padding-top: 4px;
+
         }
 
         .valor-produto {
@@ -135,11 +137,13 @@
 
         .add-produto {
             min-height: 25px;
-            background-color: aquamarine;
+            background-color: rgb(226, 233, 133);
             padding: 0px;
+            
             margin: 0px;
+            width: 85%;
             text-align: center;
-            display:inline;
+            display: none;
             position: relative;
         }
 
@@ -180,7 +184,7 @@
 
         .descricao {
 
-            background-color: rgb(241, 234, 222);
+            background-color: rgb(241, 239, 234);
 
         }
 
@@ -235,6 +239,7 @@
                 color: white;
                 bottom: 0px;
                 left: 0px;
+                margin-top: 15px;
                 top: 90%;
                 width: 100%;
                 padding-right: 14px;
@@ -245,6 +250,8 @@
                 font-family: 'anton';
                 letter-spacing: 3px;
                 font-size: 25px;
+                border-radius: solid 5px;
+
             }
 
             h1 {
@@ -290,7 +297,7 @@
         <div class="conteudo">
             <h2> CARDÁPIO HOT-DOG <span> TRADICIONAL E CHAPA</span></h2>
             <div class="imagem">
-                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="150" height="150">
+                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="150" height="100">
             </div>
             <div class="row linha item">
 
@@ -307,23 +314,23 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class=" row add-produto">
-        <div class="col-8" style="position: relative;">
-            <span class="parcial" id="parcial">
-                R$ 0.0 (x0)
-            </span>
-            <span class=" botoes">
-                <button class="botao bt-soma" onclick="addProduto()">+</button>
-                <button class="botao bt-subtrai" onclick="removeProduto()">-</button>
-            </span>
+
+        <div class=" row add-produto">
+            <div class="col-8" style="position: relative;">
+                <span class="parcial" id="parcial">
+                    R$ 0.0 (x0)
+                </span>
+                <span class=" botoes">
+                    <button class="botao bt-soma" onclick="addProduto()">+</button>
+                    <button class="botao bt-subtrai" onclick="removeProduto()">-</button>
+                </span>
+            </div>
+
         </div>
 
     </div>
-
     </div>
-
 
     <div class="container-sm " id="conteudo">
 
@@ -468,7 +475,7 @@
         <div class="conteudo">
             <h2> CARDÁPIO HAMBÚRGUER <span> Deus é fiel</span></h2>
             <div class="imagem">
-                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="150" height="150">
+                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="150" height="100">
             </div>
             <div class="row linha item">
                 <div class="col-2" class="produto">
@@ -645,7 +652,7 @@
         <div class="conteudo">
             <h2> Refigerantes e Sucos <span> Deus é fiel</span></h2>
             <div class="imagem">
-                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="150" height="150">
+                <img src="../projeto-final/img/img1.jpg" class="rounded" alt="Cinque Terre" width="150" height="100">
             </div>
             <div class="row linha item">
                 <div class="col-2" class="produto">

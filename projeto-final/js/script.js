@@ -29,3 +29,7 @@ acc[0].addEventListener("click" , function(){
     }
 })
 
+var lsProdutos = [
+    {cod:"02", valor:11, grupo:" salshicha na chapa",categoria:"hotdog" ,descricao:"Pão, salsicha"}
+    ,{cod:"03", valor:11,5,categoria:"hamburguer" ,descricao:"Pão, salsicha"}
+]

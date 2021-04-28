@@ -30,6 +30,20 @@ acc[0].addEventListener("click" , function(){
 })
 
 var lsProdutos = [
-    {cod:"02", valor:11, grupo:" salshicha na chapa",categoria:"hotdog" ,descricao:"Pão, salsicha"}
-    ,{cod:"03", valor:11,5,categoria:"hamburguer" ,descricao:"Pão, salsicha"}
-]
+    {cod:"02", valor:11.25, grupo:" salshicha na chapa",categoria:"hotdog" ,descricao:"Pão, salsicha"}
+    ,{cod:"50", valor:11.5, grupo:" salshicha na chapa", categoria:"hamburguer" ,descricao:"Pão, salsicha"}
+];
+
+function carregarProdutos(){
+    for (i in lsProdutos){
+        p = lsProdutos[i];
+        var item = document.getElementsByClassName("item")[0].cloneNode(true);
+        item.getElementsByClassName("cod-produto")[0].innerHTML= p.cod;
+        item.getElementsByClassName("valor-produto")[0].innerHTML= p.valor;
+        item.getElementsByClassName("descricao")[0].innerHTML= p.descricao;
+        document.getElementById("conteudo").appendChild(item);
+        console.log(item);
+    }
+}
+
+carregarProdutos();

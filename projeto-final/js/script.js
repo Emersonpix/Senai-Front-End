@@ -30,8 +30,8 @@ acc[0].addEventListener("click" , function(){
 })
 
 var lsProdutos = [
-    {cod:"02", valor:11.25, grupo:" salshicha na chapa",categoria:"hotdog" ,descricao:"Pão, salsicha"}
-    ,{cod:"50", valor:11.5, grupo:" salshicha na chapa", categoria:"hamburguer" ,descricao:"Pão, salsicha"}
+    {cod:"02", valor:11.20.toFixed(2), grupo:" salshicha na chapa",categoria:"hotdog" ,descricao:"Pão, salsicha"}
+    ,{cod:"50", valor:11.50.toFixed(2), grupo:" salshicha na chapa", categoria:"hamburguer" ,descricao:"Pão, salsicha"}
 ];
 
 function carregarProdutos(){

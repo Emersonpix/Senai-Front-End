@@ -1,26 +1,21 @@
 qtProduto =0;
 
-function addProduto(){
-qtProduto++;
-atualizarParcial()
+function addProduto(i , add){
+p = lsProdutos[i]
+ p.qt += add 
+ if (p.qt < 0){return;}
+ valorAtual= p.qt * p.valor   
+ document.getElementById(`parcial-${i} `).innerHTML = `R$  ${valorAtual.toFixed(2) } (x${p.qt}) `;
 }
 
 
-function removeProduto(){
-    if (qtProduto ==0) return ; 
-    qtProduto--;
-    atualizarParcial()
-}
 
-function atualizarParcial(){
-resultado = `R$  ${(9.0 * qtProduto).toFixed(1) }   (x${qtProduto}) `
-document.getElementById("valor-parcial").innerHTML = resultado;
-}
  
 
 var lsProdutos = [
-    {cod:"02", valor:11.20.toFixed(2), grupo:" salshicha ",categoria:"hotdog" ,descricao:"Pão, salsicha"}
-    ,{cod:"50", valor:11.50.toFixed(2), grupo:" salshicha na chapa", categoria:"hamburguer" ,descricao:"Pão, salsicha"}
+    {qt:0, cod:"02", valor:11.2, grupo:" salshicha ",categoria:"hotdog" ,descricao:"Pão, salsicha"}
+    ,{qt:0, cod:"50", valor:11.5, grupo:" salshicha na chapa", categoria:"hamburguer" ,descricao:"Pão, salsicha"}
+    ,{qt:0, cod:"30", valor:11.5, grupo:" salshicha na chapa", categoria:"hamburguer" ,descricao:"Pão, salsicha"}
 ];
 
 function carregarProdutos(){
@@ -31,7 +26,21 @@ function carregarProdutos(){
         item.getElementsByClassName("valor-produto")[0].innerHTML= p.valor;
         item.getElementsByClassName("descricao")[0].innerHTML= p.descricao;
         document.getElementById("conteudo").appendChild(item);
+
+        var btMais = item.getElementsByClassName("bt-soma")[0];
+        btMais.setAttribute("onclick", `addProduto(${i},1 )`);
+
+
+        var btMenos = item.getElementsByClassName("bt-subtrai")[0];
+        btMenos.setAttribute("onclick", `addProduto(${i}, -1 )`);
+
+
+        
+        item.getElementsByClassName("valor-parcial")[0].setAttribute("id",`parcial-${i} `) 
+
+
     }   
+    document.getElementsByClassName("item")[0].setAttribute("style","display:none")
 }
 
 carregarProdutos();

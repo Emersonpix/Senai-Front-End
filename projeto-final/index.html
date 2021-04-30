@@ -25,13 +25,14 @@
 
         }
 
-
+        
         #conteudo {
 
             padding-left: 12px;
             padding-right: 12px;
             margin-top: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 70px;
+            
         }
 
         .adicionais {
@@ -289,18 +290,41 @@
             .conteudo {
                 padding-left: 4px;
                 padding-right: 4px;
-            }   
+                margin-bottom: 35px;
+            }
 
             .adicionais {
-                padding-left: 4px;
-                padding-right: 4px;
+                padding-left: 0px;
+                padding-right: 0px;
                 padding-left: 12px;
-                padding-right: 12px;
+                padding-right: 0px;
                 margin-top: 10px;
                 margin-bottom: 10px;
 
+                text-align: left;
+
             }
-            .adicionais .descricao{
+
+            .cod-produto {
+                font-size: 30px;
+                width: 100%;
+            }
+
+            .valor-produto {
+                width: 100%;
+                font-size: 25px;
+            }
+
+            .adicionais .descricao {
+                font-size: 15px;
+            }
+
+            .adicionais .valor-produto {
+                font-size: 20px;
+                padding-left: 15px;
+            }
+
+            .descricao {
                 font-size: 15px;
             }
 
@@ -312,6 +336,9 @@
                 font-size: 10px;
             }
 
+            .valor-produto {
+                font-size: 20px;
+            }
 
         }
 
@@ -335,181 +362,96 @@
 
         <div class="conteudo">
             <h2> CARDÁPIO HOT-DOG <span> TRADICIONAL E CHAPA</span></h2>
-            <div class="row linha item">
-                <div class="col-2" class="produto">
-                    <div class="cod-produto">
-                        01
-                    </div>
-                    <div class="valor-produto">
-                        R$ 9,00
-                    </div>
-                </div>
-                <div class=" col-10 descricao">
-                    <p> Dog Tradicional:<br> Pão de leite ninho, molho, queijo, milho, pasta e batata palha.</p>
-                </div>
-            </div>
-            <div class=" row add-produto">
-                <div class="col-8" style="position: relative;">
-                    <span class="valor-parcial" id="valor-parcial">
-                        R$ 0.0 (x0)
-                    </span>
-                    <span class=" botoes">
-                        <button class=" bt-soma" onclick="addProduto()">+</button>
-                        <button class=" bt-subtrai" onclick="removeProduto()">-</button>
-                    </span>
-                </div>
-
-            </div>
-            <div class="row linha item">
-                <div class="col-2" class="produto">
-                    <div class="cod-produto">
-                        1.1
-                    </div>
-                    <div class="valor-produto">
-                        R$ 9,00
-                    </div>
-                </div>
-                <div class=" col-10 descricao">
-                    <p> Dog Tradicional:<br> Pão de leite ninho, molho, queijo, milho, pasta e batata palha.</p>
-                </div>
-            </div>
-
-
-
-            <div class=" row add-produto">
-                <div class="col-8" style="position: relative;">
-                    <span class="parcial">
-                        R$ 0.0 (x0)
-                    </span>
-                    <span class=" botoes">
-                        <button class="botao bt-soma">+</button>
-                        <button class="botao bt-subtrai">-</button>
-                    </span>
-                </div>
-
-            </div>
-
-            <h2> CARDÁPIO HAMBÚRGUER <span> Deus é fiel</span></h2>
-            <div class="hamburguer">
+            <div class="item-produto">
                 <div class="row linha item">
                     <div class="col-2" class="produto">
                         <div class="cod-produto">
-                            03
+                            01
                         </div>
                         <div class="valor-produto">
-                            R$ 9,50
+                            R$ 9,00
                         </div>
                     </div>
                     <div class=" col-10 descricao">
-                        <p> X-DOGÃO:<br> Pão de leite ninho, molho, queijo, milho, pasta e batata palha.</p>
+                        <p> Dog Tradicional:<br> Pão de leite ninho, molho, queijo, milho, pasta e batata palha.</p>
                     </div>
                 </div>
+                <div class=" row add-produto">
+                    <div class="col-8" style="position: relative;">
+                        <span class="valor-parcial" id="valor-parcial">
+                            R$ 0.0 (x0)
+                        </span>
+                        <span class=" botoes">
+                            <button class=" bt-soma" onclick="addProduto()">+</button>
+                            <button class=" bt-subtrai" onclick="removeProduto()">-</button>
+                        </span>
+                    </div>
+
+                </div>
 
             </div>
-            <div class=" row add-produto">
-                <div class="col-8" style="position: relative;">
-                    <span class="parcial">
-                        R$ 0.0 (x0)
-                    </span>
-                    <span class=" botoes">
-                        <button class="botao bt-soma">+</button>
-                        <button class="botao bt-subtrai">-</button>
-                    </span>
-                </div>
 
-            </div>
-        </div>
-        <h2> ADICIONAIS <span>Deus é fiel</span></h2>
+            <h2> ADICIONAIS <span>Deus é fiel</span></h2>
 
 
-        <div class="adicionais">
-            <div class="row linha item">
-                <div class=" col valor-produto">
-                    10,00
+            <div class="adicionais">
+                <div class="row linha item">
+                    <div class=" col valor-produto">
+                        10,00
+                    </div>
+                    <div class=" col-10 descricao">
+                        COMBO: <br> BATATA + REFRI
+                    </div>
+
                 </div>
-                <div class=" col-10 descricao">
-                    COMBO: <br> BATATA + REFRI
+
+                <div class=" row add-produto">
+                    <div class="col-8" style="position: relative;">
+                        <span class="parcial">
+                            R$ 0.0 (x0)
+                        </span>
+                        <span class=" botoes">
+                            <button class="botao bt-soma">+</button>
+                            <button class="botao bt-subtrai">-</button>
+                        </span>
+                    </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class=" row add-produto">
-            <div class="col-8" style="position: relative;">
-                <span class="parcial">
-                    R$ 0.0 (x0)
-                </span>
-                <span class=" botoes">
-                    <button class="botao bt-soma">+</button>
-                    <button class="botao bt-subtrai">-</button>
-                </span>
             </div>
 
-        </div>
-        
-        <div class="adicionais">
-            <div class="row linha item">
-                <div class=" col valor-produto">
-                    20,00
-                </div>
-                <div class=" col-10 descricao">
-                    COMBO: <br> Calabresa
-                </div>
-            </div>
-        </div>
 
-        
-        <div class="adicionais">
-            <div class="row linha item">
-                <div class=" col valor-produto">
-                    30,00
-                </div>
-                <div class=" col-10 descricao">
-                    Frango a passarinho. <br>
-                </div>
-            </div>
-        </div>
-
-        <h2> BEBIDAS E SUCOS <span>Deus é fiel</span></h2>
+            <h2> BEBIDAS E SUCOS <span>Deus é fiel</span></h2>
 
 
-        <div class="adicionais">
-            <div class="row linha item">
-                <div class=" col valor-produto">
-                    06,00
+            <div class="adicionais">
+                <div class="row linha item">
+                    <div class=" col valor-produto">
+                        06,00
+                    </div>
+                    <div class=" col-10 descricao">
+                        Coca-cola <br> 600ml
+                    </div>
+
                 </div>
-                <div class=" col-10 descricao">
-                    Coca-cola  <br> 600ml
+                <div class=" row add-produto">
+                    <div class="col-8" style="position: relative;">
+                        <span class="parcial">
+                            R$ 0.0 (x0)
+                        </span>
+                        <span class=" botoes">
+                            <button class="botao bt-soma">+</button>
+                            <button class="botao bt-subtrai">-</button>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="adicionais">
-            <div class="row linha item">
-                <div class=" col valor-produto">
-                    10,00
-                </div>
-                <div class=" col-10 descricao">
-                    Coca-cola: <br> 2L
-                </div>
-            </div>
+
+
+
         </div>
 
-        
-        <div class="adicionais">
-            <div class="row linha item">
-                <div class=" col valor-produto">
-                    10,00
-                </div>
-                <div class=" col-10 descricao">
-                    Guaraná <br> 2L
-                </div>
-            </div>
-        </div>
-    </div>
+        <button id="enviar" onclick="enviar"> <i class="fab fa-whatsapp"></i>ENVIAR</button>
 
-    <button id="enviar" onclick="enviar"> <i class="fab fa-whatsapp"></i>ENVIAR</button>
-
-    <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
 </body>
 
 

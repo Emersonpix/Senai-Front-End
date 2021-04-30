@@ -25,14 +25,26 @@
 
         }
 
-        
+        header {
+            position:fixed;
+            width: 100%;
+            z-index: 1;
+            top: 0px;
+            background-color: rgb(221, 209, 37);
+            padding-left: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-shadow: 2px 2px 10px 5px rgb(0 0 0 / 20%);
+
+        }
+
         #conteudo {
 
             padding-left: 12px;
             padding-right: 12px;
-            margin-top: 10px;
+            margin-top: 200px;
             margin-bottom: 70px;
-            
+
         }
 
         .adicionais {
@@ -79,6 +91,7 @@
             font-family: 'Candal';
             position: relative;
             margin-top: 15px;
+
 
         }
 
@@ -161,7 +174,7 @@
             vertical-align: middle;
             margin: 0px;
             padding: 3px;
-            display: flex !important;
+            display: flex;
             align-items: center !important;
             cursor: pointer;
         }
@@ -218,11 +231,11 @@
 
         }
 
-        @media (min-width: 500px) {
+        @media (min-width: 550px) {
 
             #enviar {
                 position: fixed;
-                top: 4px;
+                top: 35px;
                 right: 11%;
                 text-align: center;
                 background-color: rgb(35, 202, 29);
@@ -231,7 +244,7 @@
                 font-size: 30px;
                 letter-spacing: 3px;
                 z-index: 2;
-                border: none;
+                border-radius: 5px;
                 cursor: pointer;
                 padding-left: 14px;
                 padding-right: 14px;
@@ -239,6 +252,7 @@
 
             @media (max-width: 450px) {
                 #enviar {
+                    position: fixed;
                     bottom: 0px;
                     background-color: rgb(35, 202, 29);
                     color: white;
@@ -246,10 +260,11 @@
                     top: 90%;
                     width: 100%;
                     padding-right: 14px;
-                    position: fixed;
+                    
                     text-align: center;
                     padding-bottom: 13px;
                     padding-top: 5px;
+                    border-radius: 5px;
 
                 }
 
@@ -291,6 +306,7 @@
                 padding-left: 4px;
                 padding-right: 4px;
                 margin-bottom: 35px;
+               
             }
 
             .adicionais {
@@ -378,7 +394,7 @@
                 </div>
                 <div class=" row add-produto">
                     <div class="col-8" style="position: relative;">
-                        <span class="valor-parcial" >
+                        <span class="valor-parcial">
                             R$ 0.0 (x0)
                         </span>
                         <span class=" botoes">

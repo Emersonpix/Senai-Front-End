@@ -14,10 +14,10 @@ function removeProduto(){
 
 function atualizarParcial(){
 resultado = `R$  ${(9.0 * qtProduto).toFixed(1) }   (x${qtProduto}) `
-document.getElementById("parcial").innerHTML = resultado;
+document.getElementById("valor-parcial").innerHTML = resultado;
 }
  
-var acc = document.getElementsByClassName("conteudo");
+var acc = document.getElementsByClassName("item");
 acc[0].addEventListener("click" , function(){
  
     this.classList.toggle("active");
@@ -41,8 +41,8 @@ function carregarProdutos(){
         item.getElementsByClassName("cod-produto")[0].innerHTML= p.cod;
         item.getElementsByClassName("valor-produto")[0].innerHTML= p.valor;
         item.getElementsByClassName("descricao")[0].innerHTML= p.descricao;
-        document.getElementById("conteudo").appendChild(item);
-        console.log(item);
+        item.getElementById("conteudo").appendChild(item);
+        
     }
 }
 

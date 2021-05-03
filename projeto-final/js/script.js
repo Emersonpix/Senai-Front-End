@@ -36,16 +36,22 @@ function carregarProdutos() {
       document.getElementById("conteudo").appendChild(h2);
     }
 
+    var item = document.getElementsByClassName("item-produto")[0].cloneNode(true);
+    p = lsProdutos[i];
     if (p.cod != '') {
-
-      p = lsProdutos[i];
-      var item = document.getElementsByClassName("item-produto")[0].cloneNode(true);
       item.getElementsByClassName("cod-produto")[0].innerHTML = p.cod;
-      item.getElementsByClassName("valor-produto")[0].innerHTML = `R$ ${p.valor}`
-      item.getElementsByClassName("descricao")[0].innerHTML = p.descricao;
-      
-      document.getElementById("conteudo").appendChild(item);
-    } 
+
+
+      item.getElementsByClassName("adicionais")[0].remove();
+    } else {
+      item.getElementsByClassName("item")[0].remove();
+
+
+
+    }
+    item.getElementsByClassName("descricao")[0].innerHTML = p.descricao;
+    item.getElementsByClassName("valor-produto")[0].innerHTML = `R$ ${p.valor}`
+    document.getElementById("conteudo").appendChild(item);
 
     var btMais = item.getElementsByClassName("bt-soma")[0];
     btMais.setAttribute("onclick", `addProduto(${i},1 )`);
@@ -61,6 +67,7 @@ function carregarProdutos() {
 
   }
   document.getElementsByClassName("item")[0].setAttribute("style", "display:none")
+  document.getElementsByClassName("adicionais")[0].setAttribute("style", "display:none")
 }
 
 carregarProdutos()

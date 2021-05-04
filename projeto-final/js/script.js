@@ -13,13 +13,13 @@ function addProduto(i, add) {
 
 
 //var lsProdutos = [
-  //{ qt: 0, cod: "02", valor: 11.2, grupo: " salshicha ", categoria: "hotdog", descricao: "Pão, salsicha" }
- // , { qt: 0, cod: "50", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
-  //, { qt: 0, cod: "30", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
+//{ qt: 0, cod: "02", valor: 11.2, grupo: " salshicha ", categoria: "hotdog", descricao: "Pão, salsicha" }
+// , { qt: 0, cod: "50", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
+//, { qt: 0, cod: "30", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
 //];
 
 //if (localStorage.getItem('listaProdutos') == null) {
-  //localStorage.setItem("listaProdutos", JSON.stringify(lsProdutos))
+//localStorage.setItem("listaProdutos", JSON.stringify(lsProdutos))
 //}
 //lsProdutos = JSON.parse(localStorage.getItem('listaProdutos'));
 
@@ -46,7 +46,7 @@ function carregarProdutos() {
       item.getElementsByClassName("adicionais")[0].remove();
     } else {
       item.getElementsByClassName("item")[0].remove();
-      item.getElementsByClassName("pasta")[0].remove();
+      item.getElementsByClassName("pasta")[0].remove()
 
 
 
@@ -73,7 +73,7 @@ function carregarProdutos() {
 }
 
 
-carregarProdutos();
+
 
 function carregaEvento(acc) {
   for (i = 0; i < acc.length; i++) {
@@ -88,7 +88,61 @@ function carregaEvento(acc) {
     });
   }
 }
+btEnviar = document.getElementById("enviar")
+btEnviar.addEventListener("click", function () {
+  modal = document.getElementById("modal-enviar")
+  msg = ''
+  total = 0
+  for (i in lsProdutos) {
+    p = lsProdutos[i]
+    if (p.qt > 0) {
+      totalP = (p.qt * p.valor).toFixed(2)
+      total += Number(totalP)
+      msg += `COD  ${p.cod} (${p.qt}x ${p.valor}) =${totalP} <br> `
 
+    }
+
+
+  }
+  if (total == 0) {
+    msg = ' Escolha pelo menos um produto.'
+  } else {
+    msg += `Total dos Produtos =R$ ${total.toFixed(2)}<br> `
+  }
+  document.getElementsByClassName("corpo-modal")[0].innerHTML = msg
+  modal.style.display = "block"
+
+if (total == 0) {
+  document.getElementById("complemento-envio").style.display = "none"
+
+} else {
+
+  document.getElementById("complemento-envio").style.display = "block"
+}
+})
+btFecharModal = document.getElementById("fechar-modal")
+btFecharModal.addEventListener("click", function () {
+  modal = document.getElementById("modal-enviar")
+  modal.style.display = "none"
+})
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function escolherPasta() {
+  var checkBox = document.getElementById("check-pasta");
+  console.log("check-pasta")
+  var pasta = document.getElementsByClassName ("pasta");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+carregarProdutos();
 acc = document.getElementsByClassName("adicionais");
 carregaEvento(acc);
 acc = document.getElementsByClassName("item");

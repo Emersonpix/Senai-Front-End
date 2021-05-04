@@ -78,16 +78,16 @@
                         </span>
                     </div>
                     <fieldset class="container pasta">
-                        <div id="check">
+                        <div id="check-pasta">
                             <label> <strong>Escolha sua pasta: </strong> </label><br>
                             <input type="checkbox" id="alho" name="alho" value="alho">
-                            <label for="tecnologia1">Alho</label>
+                            <label for="alho">Alho</label>
                             <input type="checkbox" id="atum" name="atum" value="atum">
-                            <label for="tecnologia1">Atum</label>
+                            <label for="atum">Atum</label>
                             <input type="checkbox" id="azeitona" name="azeitona" value="azeitona">
-                            <label for="tecnologia1">Azeitona</label>
+                            <label for="azeitona">Azeitona</label>
                             <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                            <label for="tecnologia1">Bacon</label>
+                            <label for="bacon">Bacon</label>
 
                         </div>
                     </fieldset>
@@ -95,13 +95,27 @@
             </div>
 
             <button id="enviar" onclick="enviar"> <i class="fab fa-whatsapp"></i>ENVIAR</button>
-            
+
             <div id="modal-enviar">
-               <div class="titulo-modal" >
-                   Pedido
-               </div>
+                <div class="titulo-modal">
+                    PEDIDO:
+                    <span class="close" id="fechar-modal"> &times;</span>
+                </div>
+                <div class="corpo-modal">
+                    Escolha pelo menos um produto.
+                    <div id="complemento-envio">
+                        <input type="text" placeholder="Digite seu endereço:">
+                        <input type="text" placeholder="Digite o seu nome:">
+                        <span> Clique em continuar para enviar seu pedido via Whatsapp!</span>
+
+                    </div>
+                </div>
+                <div class="rodape-modal">
+
+                </div>
+
             </div>
-            
+
             <script src="js/itens.js"></script>
             <script src="js/script.js"></script>
 </body>

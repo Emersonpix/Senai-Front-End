@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+    background-color: rgb(179, 93, 93);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 2px 2px 10px 5px rgb(0 0 0 / 20%);
+
+}
+
+#conteudo {
+
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 150px;
+    margin-bottom: 70px;
+
+}
+
+.adicionais {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+
+}
+
+
+h1 {
+    background-color: rgb(224, 96, 10);
+    padding: 25px;
+    color: black;
+    display: flex;
+    font-family: 'Anton';
+    font-size: 30px;
+    letter-spacing: 5px;
+    padding-left: 12%;
+    border-bottom: solid rgb(15, 5, 5) 5px;
+    position: relative;
+
+
+
+}
+
+h1 span {
+    background-color: rgb(241, 13, 13);
+    color: rgb(240, 237, 64);
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+
+
+
+
+h2 {
+    border-left: solid red 5px;
+    border-bottom: solid red 2px;
+    padding-left: 3px;
+    font-size: 22px;
+    font-family: 'Candal';
+    position: relative;
+    margin-top: 15px;
+
+
+}
+
+h2 span {
+
+    position: absolute;
+    right: 2px;
+    font-family: 'Cinzel Decorative';
+}
+
+.produto {
+    background-color: rgb(240, 237, 64);
+    cursor: pointer;
+
+
+}
+
+.adicionais .valor-produto {
+    background-color: rgb(235, 221, 28);
+    color: rgb(0, 0, 0);
+    width: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'anton';
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.adicionais .descricao {
+    padding-left: 0px;
+    text-align: justify;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: initial;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    margin: 0px;
+    margin-left: auto;
+    padding: 3px;
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+
+}
+
+.cod-produto {
+    background-color: black;
+    color: rgb(255, 246, 246);
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'anton';
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+}
+
+.valor-produto {
+    background-color: rgb(235, 221, 28);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'anton';
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+}
+
+.descricao {
+    padding-left: 0px;
+    text-align: justify;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: initial;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 3px;
+    display: flex;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+.add-produto {
+    min-height: 25px;
+    background-color: rgb(231, 231, 220);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    position: relative;
+}
+
+.botoes {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.botao {
+    font-family: 'Alfa Slab One';
+    background-color: rgba(255, 217, 0, 1);
+    display: inline-block;
+    font-size: 20px;
+    width: 25px;
+    right: 0;
+    border: none;
+}
+
+.botoes button {
+    width: 30px;
+    height: 30px;
+}
+
+.bt-soma {
+    background-color: rgb(0, 0, 0);
+    color: rgb(238, 238, 28);
+    font-family: 'Cinzel Decorative';
+
+}
+
+.bt-subtrai {
+
+    background-color: yellow;
+    color: black;
+
+}
+
+.descricao {
+
+    background-color: rgb(241, 239, 234);
+
+}
+
+
+@media (min-width: 550px) {
+
+    #enviar {
+        position: fixed;
+        top: 35px;
+        right: 11%;
+        text-align: center;
+        background-color: rgb(35, 202, 29);
+        color: white;
+        font-family: 'Anton';
+        font-size: 30px;
+        letter-spacing: 3px;
+        z-index: 2;
+        border-radius: 5px;
+        cursor: pointer;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+   
+
+
+    @media (max-width: 550px) {
+        #conteudo {
+            padding-left: 4px;
+            padding-right: 4px;
+            margin-bottom: 100%;
+            position: relative;
+            display: flex;
+
+        }
+
+        #enviar {
+            position: fixed;
+            bottom: 0px;
+            background-color: rgb(35, 202, 29);
+            color: white;
+            left: 0px;
+            top: 90%;
+            width: 100%;
+            padding-right: 14px;
+            text-align: center;
+            padding-bottom: 13px;
+            padding-top: 5px;
+            border-radius: 5px;
+
+        }
+
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 550px) {
+    
+
+
+    #enviar {
+        background-color: rgb(35, 202, 29);
+        color: rgb(255, 255, 255);
+        position:static;
+        bottom: 0px;
+        left: 0px;
+        margin-top: 5px;
+        top: 93%;
+        width: 100%;
+        padding-right: 14px;
+        text-align: center;
+        font-family: 'anton';
+        letter-spacing: 3px;
+        font-size: 25px;
+        border-radius: 10px;
+    
+        
+
+    }
+
+    #conteudo {
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-bottom: 45px;
+        position: relative;
+
+    }
+
+
+    h1 {
+        padding-left: 2%;
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .container,
+    .container-sm {
+        padding: 2px;
+    }
+
+
+    .adicionais {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-left: 12px;
+        padding-right: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+
+    }
+
+    .cod-produto {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .valor-produto {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .adicionais .descricao {
+        font-size: 15px;
+    }
+
+    .adicionais .valor-produto {
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    h2 span {
+
+        position: absolute;
+        right: 2px;
+        font-family: 'Cinzel Decorative';
+        font-size: 10px;
+    }
+
+    .valor-produto {
+        font-size: 20px;
+    }
+
+}
+
+.item-produto {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+td span {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 0px 4px 4px 4px;
+    margin: 0px;
+    cursor: pointer;
+    margin-left: 4px;
+    border-radius: 5px;
+
+}

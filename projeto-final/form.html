@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Produtos </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
 
 </head>
 
@@ -62,82 +63,8 @@
 
 
     </div>
-    <script>
-        var lsProdutos = [
-            { qt: 0, cod: "01", valor: 10, grupo: " Cachorro-quente ", tipo: "hotdog", descricao: "Pão, salsicha, queijo,milho e batata." }
-            , { qt: 0, cod: "02", valor: 11.5, grupo: " Dogão", tipo: "hamburguer", descricao: "Pão, hamburguer, queijo,milho e batata." }
-            , { qt: 0, cod: "03", valor: 11.5, grupo: " salshicha na chapa", tipo: "hamburguer", descricao: "Pão, salsicha" }
-            , { qt: 0, cod: "04", valor: 12.5, grupo: " Dogão", tipo: "hamburguer", descricao: "Pão,2 salsichas, hamburguer, pasta de alho, batata palha " }
-        ];
-        if (localStorage.getItem('listaProdutos') == null) {
-            localStorage.setItem("listaProdutos",JSON.stringify (lsProdutos))
-        }
-           lsProdutos = JSON.parse(localStorage.getItem('listaProdutos'));
-
-            function apagar() {
-                id = document.getElementById("index").value
-                if (id == '') {
-                    return;
-                }
-                if (confirm("Deseja realmente apagar esse registro?")) {
-
-                    lsProdutos.splice(id, 1)
-                    localStorage.setItem("listaProdutos",JSON.stringify (lsProdutos))
-                    carregarTable()
-                    novo();
-                }
-
-            }
-        function carregarTable() {
-            tbody = '';
-            for (i in lsProdutos) {
-                p = lsProdutos[i]
-                tbody += `<tr onclick ='editar(${i})'' > <td>${p.cod}</td> <td>${p.grupo}</td>  <td>${p.descricao}</td> <td>${p.valor}</td></tr>`
-
-
-            }
-
-            document.getElementById("tb-corpo").innerHTML = tbody
-        }
-        function novo() {
-            document.getElementById("formulario").reset();
-            document.getElementById("index").value = "";
-
-
-        }
-        function editar(id) {
-            p = lsProdutos[id]
-            document.getElementById("cod").value = p.cod;
-            document.getElementById("grupo").value = p.grupo;
-            document.getElementById("descricao").value = p.descricao;
-            document.getElementById("valor").value = p.valor
-            document.getElementById("tipo").value = p.tipo;
-
-            document.getElementById("index").value = id;
-
-        }
-        function gravar() {
-            id = document.getElementById("index").value
-            p = { qt: 0 }
-            p.cod = document.getElementById("cod").value
-            p.grupo = document.getElementById("grupo").value
-            p.descricao = document.getElementById("descricao").value
-            p.valor = document.getElementById("valor").value
-            p.tipo = document.getElementById("tipo").value
-
-            if (id != '') {
-                lsProdutos[id] = p
-
-            } else {
-                lsProdutos.push(p)
-
-            }
-            localStorage.setItem("listaProdutos",JSON.stringify (lsProdutos))
-            carregarTable()
-            novo();
-        }
-        carregarTable()
-    </script>
+    <script src="js/itens.js"></script>
+   <script src="js/form.js"></script>
 </body>
 
 </html>

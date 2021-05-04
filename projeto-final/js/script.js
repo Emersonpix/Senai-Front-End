@@ -12,17 +12,18 @@ function addProduto(i, add) {
 
 
 
-var lsProdutos = [
-  { qt: 0, cod: "02", valor: 11.2, grupo: " salshicha ", categoria: "hotdog", descricao: "Pão, salsicha" }
-  , { qt: 0, cod: "50", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
-  , { qt: 0, cod: "30", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
-];
+//var lsProdutos = [
+  //{ qt: 0, cod: "02", valor: 11.2, grupo: " salshicha ", categoria: "hotdog", descricao: "Pão, salsicha" }
+ // , { qt: 0, cod: "50", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
+  //, { qt: 0, cod: "30", valor: 11.5, grupo: " salshicha na chapa", categoria: "hamburguer", descricao: "Pão, salsicha" }
+//];
 
-if (localStorage.getItem('listaProdutos') == null) {
-  localStorage.setItem("listaProdutos", JSON.stringify(lsProdutos))
-}
-lsProdutos = JSON.parse(localStorage.getItem('listaProdutos'));
+//if (localStorage.getItem('listaProdutos') == null) {
+  //localStorage.setItem("listaProdutos", JSON.stringify(lsProdutos))
+//}
+//lsProdutos = JSON.parse(localStorage.getItem('listaProdutos'));
 
+lsProdutos = carregarItens();
 function carregarProdutos() {
   grupoAtual = ''
 
@@ -75,15 +76,15 @@ carregarProdutos();
 
 function carregaEvento(acc) {
   for (i = 0; i < acc.length; i++) {
-      itemTemp = acc[i];
-      itemTemp.addEventListener("click", function () {
-          var panel = this.nextElementSibling;
-          if (panel.style.display == "block") {
-              panel.style.display = "none";
-          } else {
-              panel.style.display = "block";
-          }
-      });
+    itemTemp = acc[i];
+    itemTemp.addEventListener("click", function () {
+      var panel = this.nextElementSibling;
+      if (panel.style.display == "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
   }
 }
 

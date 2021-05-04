@@ -46,6 +46,7 @@ function carregarProdutos() {
       item.getElementsByClassName("adicionais")[0].remove();
     } else {
       item.getElementsByClassName("item")[0].remove();
+      item.getElementsByClassName("pasta")[0].remove();
 
 
 

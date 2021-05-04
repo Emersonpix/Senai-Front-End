@@ -285,6 +285,7 @@ h2 span {
         font-size: 25px;
         border-radius: 10px;
         z-index: 1;
+        
     
         
 
@@ -294,7 +295,7 @@ h2 span {
         padding-left: 4px;
         padding-right: 4px;
         margin-bottom: 45px;
-        position: relative;
+       
 
     }
 
@@ -343,6 +344,7 @@ h2 span {
     }
 
     .descricao {
+        margin-right: auto;
         font-size: 15px;
     }
 

@@ -209,7 +209,9 @@ h2 span {
     background-color: rgb(241, 239, 234);
 
 }
-
+.pasta{
+   
+}
 
 @media (min-width: 550px) {
 
@@ -343,6 +345,12 @@ h2 span {
     .adicionais .valor-produto {
         font-size: 20px;
         padding-left: 15px;
+    }
+    .pasta{
+        
+        padding-left: 15px;
+        padding-right: auto;
+
     }
 
     .descricao {

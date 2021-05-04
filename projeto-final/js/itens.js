@@ -24,9 +24,7 @@ function carregarItens(){
     
     {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":"Lata","valor":"05.00","tipo":""},
     {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":"600 ML","valor":"06.00","tipo":""},
-    
-    {"qt":0,"cod":"","grupo":"Pastas","descricao":"1-Alho 2-Atum 3-Azeitona 4-Mixta-Bacon+Calabresa 5-Parmesão ","valor":"0","tipo":"Escolha sua pasta:"}
-    
+
     
     ]
     

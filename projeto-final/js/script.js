@@ -70,17 +70,24 @@ function carregarProdutos() {
   document.getElementsByClassName("adicionais")[0].setAttribute("style", "display:none")
 }
 
-carregarProdutos()
-var acc = document.getElementsByClassName("item");
-for (i in acc) {
-  acc[i].addEventListener("click", function () {
 
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  })
+carregarProdutos();
+
+function carregaEvento(acc) {
+  for (i = 0; i < acc.length; i++) {
+      itemTemp = acc[i];
+      itemTemp.addEventListener("click", function () {
+          var panel = this.nextElementSibling;
+          if (panel.style.display == "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      });
+  }
 }
+
+acc = document.getElementsByClassName("adicionais");
+carregaEvento(acc);
+acc = document.getElementsByClassName("item");
+carregaEvento(acc);

@@ -272,7 +272,7 @@ h2 span {
     #enviar {
         background-color: rgb(35, 202, 29);
         color: rgb(255, 255, 255);
-        position:static;
+        position:fixed;
         bottom: 0px;
         left: 0px;
         margin-top: 5px;
@@ -284,6 +284,7 @@ h2 span {
         letter-spacing: 3px;
         font-size: 25px;
         border-radius: 10px;
+        z-index: 1;
     
         
 

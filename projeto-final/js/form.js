@@ -1,11 +1,14 @@
 
-        var lsProdutos = [
-            { qt: 0, cod: "01", valor: 10, grupo: " Cachorro-quente ", tipo: "hotdog", descricao: "Pão, salsicha, queijo,milho e batata." }
-            , { qt: 0, cod: "02", valor: 11.5, grupo: " Dogão", tipo: "hamburguer", descricao: "Pão, hamburguer, queijo,milho e batata." }
-            , { qt: 0, cod: "03", valor: 11.5, grupo: " salshicha na chapa", tipo: "hamburguer", descricao: "Pão, salsicha" }
-            , { qt: 0, cod: "04", valor: 12.5, grupo: " Dogão", tipo: "hamburguer", descricao: "Pão,2 salsichas, hamburguer, pasta de alho, batata palha " }
-        ];
-        if (localStorage.getItem('listaProdutos') == null) {
+      //  var lsProdutos = [
+        //    { qt: 0, cod: "01", valor: 10, grupo: " Cachorro-quente ", tipo: "hotdog", descricao: "Pão, salsicha, queijo,milho e batata." }
+          //  , { qt: 0, cod: "02", valor: 11.5, grupo: " Dogão", tipo: "hamburguer", descricao: "Pão, hamburguer, queijo,milho e batata." }
+           // , { qt: 0, cod: "03", valor: 11.5, grupo: " salshicha na chapa", tipo: "hamburguer", descricao: "Pão, salsicha" }
+            //, { qt: 0, cod: "04", valor: 12.5, grupo: " Dogão", tipo: "hamburguer", descricao: "Pão,2 salsichas, hamburguer, pasta de alho, batata palha " }
+        //];
+
+        lsProdutos = carregarItens();
+
+       if (localStorage.getItem('listaProdutos') == null) {
             localStorage.setItem("listaProdutos", JSON.stringify(lsProdutos))
         }
         lsProdutos = JSON.parse(localStorage.getItem('listaProdutos'));

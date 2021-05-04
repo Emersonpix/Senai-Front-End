@@ -337,6 +337,7 @@ h2 span {
 
     .adicionais .descricao {
         font-size: 15px;
+        text-align: left;
     }
 
     .adicionais .valor-produto {
@@ -348,6 +349,8 @@ h2 span {
         margin-right: auto;
         font-size: 15px;
         text-align: left;
+        
+       
     }
 
     h2 span {

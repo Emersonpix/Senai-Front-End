@@ -15,8 +15,8 @@ function carregarItens(){
     {"qt":0,"cod":"14","grupo":"Hambúrguers","descricao":"Xegg-Bacon:Pão,hambúrguer,queijo,presunto,ovo,bacon, cebola, tomate e alface.","valor":"14.00","tipo":"X-Mongly"},
     {"qt":0,"cod":"15","grupo":"Mongly-Especias","descricao":"Bananito: Pão,hambúrguer,queijo,milho,banana com canela e açucar,<br>tomate,alface e batata palha.","valor":"10.00","tipo":"X-Especias"},
     {"qt":0,"cod":"16","grupo":"Mongly-Especias","descricao":"X-Calabigui:Pão,hambúrguer,queijo,calabresa, cebola,ovo,tomate e alface.","valor":"12.00","tipo":"X-Especias"},
-    {"qt":0,"cod":"17","grupo":"Mongly-Especias","descricao":"X-Brutos:Pão,2hambúrguers, queijo,presunto,bacon,ovo,cheddar,tomate e alface.","valor":"12.00","tipo":"X-Especias"},
-    {"qt":0,"cod":"18","grupo":"Mongly-Especias","descricao":"Burgão:Pão,hambúrguer,queijo,presunto,bacon,ovo,<br>cheddar,cebola,calabresa, salsicha,banana, milho,<br>batata palha,tomate e alface.","valor":"18.00","tipo":"X-Especias"},
+    {"qt":0,"cod":"17","grupo":"Mongly-Especias","descricao":"X-Brutos:Pão,2hambúrguers,queijo, presunto,bacon,ovo,cheddar,tomate e alface.","valor":"12.00","tipo":"X-Especias"},
+    {"qt":0,"cod":"18","grupo":"Mongly-Especias","descricao":"Burgão:Pão,hambúrguer,queijo,presunto,bacon,ovo,<br>cheddar, cebola,calabresa, salsicha,banana,milho, <br>batata palha,tomate e alface.","valor":"18.00","tipo":"X-Especias"},
     
     {"qt":0,"cod":"","grupo":"Sucos","descricao":"Caju","valor":"05.00","tipo":""},
     {"qt":0,"cod":"","grupo":"Sucos","descricao":"Maracujá","valor":"05.00","tipo":""},

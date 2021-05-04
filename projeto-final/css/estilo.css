@@ -149,7 +149,7 @@ h2 span {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: initial;
     line-height: 1.2;
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
     vertical-align: middle;
     margin: 0px;
     padding: 3px;
@@ -239,6 +239,8 @@ h2 span {
             margin-bottom: 100%;
             position: relative;
             display: flex;
+            
+         
 
         }
 
@@ -249,7 +251,7 @@ h2 span {
             color: white;
             left: 0px;
             top: 90%;
-            width: 100%;
+            width: auto;
             padding-right: 14px;
             text-align: center;
             padding-bottom: 13px;
@@ -271,7 +273,7 @@ h2 span {
 
     #enviar {
         background-color: rgb(35, 202, 29);
-        color: rgb(255, 255, 255);
+        color: rgb(22, 15, 15);
         position:fixed;
         bottom: 0px;
         left: 0px;
@@ -292,9 +294,8 @@ h2 span {
     }
 
     #conteudo {
-        padding-left: 4px;
-        padding-right: 4px;
-        margin-bottom: 45px;
+        margin-top: 130px;
+        margin-bottom: 50px;
        
 
     }
@@ -346,6 +347,7 @@ h2 span {
     .descricao {
         margin-right: auto;
         font-size: 15px;
+        text-align: justify;
     }
 
     h2 span {

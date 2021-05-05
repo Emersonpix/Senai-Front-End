@@ -92,6 +92,9 @@ function carregaEvento(acc) {
     });
   }
 }
+
+pedido = ''
+
 btEnviar = document.getElementById("enviar")
 btEnviar.addEventListener("click", function () {
   modal = document.getElementById("modal-enviar")
@@ -102,7 +105,7 @@ btEnviar.addEventListener("click", function () {
     if (p.qt > 0) {
       totalP = (p.qt * p.valor).toFixed(2)
       total += Number(totalP)
-      msg += (p.cod == '')? `${p.descricao} `: `COD  ${p.cod}`
+      msg += (p.cod == '') ? `${p.tipo}${p.descricao} ` : `COD  ${p.cod}`
       msg += ` (${p.qt}x ${p.valor} )  =${totalP}<br> `
 
     }
@@ -112,29 +115,40 @@ btEnviar.addEventListener("click", function () {
   if (total == 0) {
     msg = 'Escolha pelo menos um produto.'
     rodape = document.getElementById("rodape-modal")
-    rodape.innerHTML =""
+    rodape.innerHTML = ""
   } else {
-  
-  msg += `Total dos Produtos =R$ ${total.toFixed(2)}<br> `
-  msg += ` <div id="complemento-envio">
+
+    msg += `Total dos Produtos =R$ ${total.toFixed(2)}<br> `
+    pedido = msg
+    msg += ` <div id="complemento-envio">
   <input type="text" id="endereco" placeholder="Digite seu endereço:">
   <input type="text" id="nome" placeholder="Digite o seu nome:">
   <span> Clique em "CONTINUAR" para enviar seu pedido via Whatsapp!</span>
   </div>`
-  rodape = document.getElementById("rodape-modal")
-    rodape.innerHTML =`<button type="button" onclick="continuar()"><i class="fab fa-whatsapp"></i>Continuar</button>`
-}
+    rodape = document.getElementById("rodape-modal")
+    rodape.innerHTML = `<button type="button" onclick="continuar()"><i class="fab fa-whatsapp"></i>Continuar</button>`
+  }
   document.getElementsByClassName("corpo-modal")[0].innerHTML = msg
   modal.style.display = "block"
 
 
 })
 
-function continuar(){
-  nome=document.getElementById("nome")
-  if(nome.value=="" )
-  {
+function continuar() {
+  nome = document.getElementById("nome")
+  if (nome.value == "") {
     alert("Digite seu nome")
+  } else {
+    fone = '5561991429941'
+    nome = document.getElementById("nome").value
+    endereco = document.getElementById("endereco").value
+    pedido = `Olá meu nome é *${nome}* desejo fazer o seguinte pedido:<br>` + pedido
+    pedido += (endereco != '')?`Pasta de: <br> Meu endereço é: ${endereco}`:''
+
+    pedido = pedido.replaceAll('<br>', '\n')
+    pedido = encodeURI(pedido)
+    link = `http://api.whatsapp.com/send?phone=${fone}&text=${pedido}`
+    window.open(link, '_blank')
   }
 }
 
@@ -144,19 +158,19 @@ btFecharModal.addEventListener("click", function () {
   modal = document.getElementById("modal-enviar")
   modal.style.display = "none"
 })
-
-
-function escolherPasta(i, pasta) {
-  lsProdutos[i].pasta = pasta
-  console.log("escolher-pasta" + i, pasta)
-
-
-}
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
+
+function escolherPasta(i, pasta) {
+  lsProdutos[i].pasta = pasta
+
+
+
+}
+
 carregarProdutos();
 acc = document.getElementsByClassName("adicionais");
 carregaEvento(acc);

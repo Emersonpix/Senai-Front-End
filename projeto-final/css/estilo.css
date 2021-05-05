@@ -393,7 +393,7 @@ td span {
 }
 
 #modal-enviar{
-   display: none;
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -437,9 +437,8 @@ td span {
     padding: 15px;
     position: relative;
 }
-#complemento-envio{
-    display: none;
-}
+
+
 #complemento-envio input{
     
     width: 80%;

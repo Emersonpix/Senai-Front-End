@@ -80,44 +80,42 @@
                     <fieldset class="container pasta">
                         <div id="check-pasta">
                             <label> <strong>Escolha sua pasta: </strong> </label><br>
-                            <input type="checkbox" id="alho" name="alho" value="alho">
+                            <input type="checkbox" id="alho" name="alho" value="alho" class="pst">
                             <label for="alho">Alho</label>
-                            <input type="checkbox" id="atum" name="atum" value="atum">
+                            <input type="checkbox" id="atum" name="atum" value="atum" class="pst">
                             <label for="atum">Atum</label>
-                            <input type="checkbox" id="azeitona" name="azeitona" value="azeitona">
+                            <input type="checkbox" id="azeitona" name="azeitona" value="azeitona" class="pst">
                             <label for="azeitona">Azeitona</label>
-                            <input type="checkbox" id="bacon" name="bacon" value="bacon">
+                            <input type="checkbox" id="bacon" name="bacon" value="bacon" class="pst">
                             <label for="bacon">Bacon</label>
 
                         </div>
                     </fieldset>
                 </div>
             </div>
+        </div>
+    </div>
+    <button id="enviar" onclick="enviar"> <i class="fab fa-whatsapp"></i>ENVIAR</button>
 
-            <button id="enviar" onclick="enviar"> <i class="fab fa-whatsapp"></i>ENVIAR</button>
+    <div id="modal-enviar">
+        <div class="titulo-modal">
+            PEDIDO:<span class="close" id="fechar-modal"> &times;</span>
+            
+        </div>
+        <div class="corpo-modal">
+            Escolha pelo menos um produto.
+           
+        </div>
+        <div class="rodape-modal">
 
-            <div id="modal-enviar">
-                <div class="titulo-modal">
-                    PEDIDO:
-                    <span class="close" id="fechar-modal"> &times;</span>
-                </div>
-                <div class="corpo-modal">
-                    Escolha pelo menos um produto.
-                    <div id="complemento-envio">
-                        <input type="text" placeholder="Digite seu endereço:">
-                        <input type="text" placeholder="Digite o seu nome:">
-                        <span> Clique em continuar para enviar seu pedido via Whatsapp!</span>
+        </div>
 
-                    </div>
-                </div>
-                <div class="rodape-modal">
+    </div>
 
-                </div>
 
-            </div>
 
-            <script src="js/itens.js"></script>
-            <script src="js/script.js"></script>
+    <script src="js/itens.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 

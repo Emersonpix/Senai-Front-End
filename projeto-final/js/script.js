@@ -39,6 +39,10 @@ function carregarProdutos() {
 
     var item = document.getElementsByClassName("item-produto")[0].cloneNode(true);
     p = lsProdutos[i];
+    item.getElementsByClassName("pst")[0].setAttribute('onclick', ` escolherPasta(${i},this.value)`)
+    item.getElementsByClassName("pst")[1].setAttribute('onclick', ` escolherPasta(${i},this.value)`)
+    item.getElementsByClassName("pst")[2].setAttribute('onclick', ` escolherPasta(${i},this.value)`)
+    item.getElementsByClassName("pst")[3].setAttribute('onclick', ` escolherPasta(${i},this.value)`)
     if (p.cod != '') {
       item.getElementsByClassName("cod-produto")[0].innerHTML = p.cod;
 
@@ -105,42 +109,37 @@ btEnviar.addEventListener("click", function () {
 
   }
   if (total == 0) {
-    msg = ' Escolha pelo menos um produto.'
+    msg = 'Escolha pelo menos um produto.'
   } else {
-    msg += `Total dos Produtos =R$ ${total.toFixed(2)}<br> `
-  }
+  
+  msg += `Total dos Produtos =R$ ${total.toFixed(2)}<br> `
+  msg += ` <div id="complemento-envio">
+  <input type="text" placeholder="Digite seu endereço:">
+  <input type="text" placeholder="Digite o seu nome:">
+  <span> Clique em "CONTINUAR" para enviar seu pedido via Whatsapp!</span>
+  </div>`
+}
   document.getElementsByClassName("corpo-modal")[0].innerHTML = msg
   modal.style.display = "block"
 
-if (total == 0) {
-  document.getElementById("complemento-envio").style.display = "none"
 
-} else {
-
-  document.getElementById("complemento-envio").style.display = "block"
-}
 })
 btFecharModal = document.getElementById("fechar-modal")
 btFecharModal.addEventListener("click", function () {
   modal = document.getElementById("modal-enviar")
   modal.style.display = "none"
 })
-
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
 
-function escolherPasta() {
-  var checkBox = document.getElementById("check-pasta");
-  console.log("check-pasta")
-  var pasta = document.getElementsByClassName ("pasta");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-  }
+function escolherPasta(i, pasta) {
+  lsProdutos[i].pasta = pasta
+  console.log("escolher-pasta" + i, pasta)
+
+
 }
 carregarProdutos();
 acc = document.getElementsByClassName("adicionais");

@@ -22,8 +22,12 @@ function carregarItens(){
     {"qt":0,"cod":"","grupo":"Sucos","descricao":"Maracujá","valor":"05.00","tipo":""},
     {"qt":0,"cod":"","grupo":"Sucos","descricao":"Laranja","valor":"05.00","tipo":""},
     
-    {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":"Lata","valor":"05.00","tipo":""},
-    {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":"600 ML","valor":"06.00","tipo":""},
+    {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":"Coca-cola 350 ml","valor":"05.00","tipo":""},
+    {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":"Guraná 350 ml","valor":"05.00","tipo":""},
+
+    {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":"Coca-cola  600 ML","valor":"06.00","tipo":""},
+    {"qt":0,"cod":"","grupo":"Refrigerantes","descricao":" Guraná 600 ML","valor":"06.00","tipo":""},
+
 
     
     ]

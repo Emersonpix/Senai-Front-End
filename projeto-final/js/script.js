@@ -102,7 +102,8 @@ btEnviar.addEventListener("click", function () {
     if (p.qt > 0) {
       totalP = (p.qt * p.valor).toFixed(2)
       total += Number(totalP)
-      msg += `COD  ${p.cod} (${p.qt}x ${p.valor}) =${totalP} <br> `
+      msg += (p.cod == '')? `${p.descricao} `: `COD  ${p.cod}`
+      msg += ` (${p.qt}x ${p.valor} )  =${totalP}<br> `
 
     }
 
@@ -110,36 +111,51 @@ btEnviar.addEventListener("click", function () {
   }
   if (total == 0) {
     msg = 'Escolha pelo menos um produto.'
+    rodape = document.getElementById("rodape-modal")
+    rodape.innerHTML =""
   } else {
   
   msg += `Total dos Produtos =R$ ${total.toFixed(2)}<br> `
   msg += ` <div id="complemento-envio">
-  <input type="text" placeholder="Digite seu endereço:">
-  <input type="text" placeholder="Digite o seu nome:">
+  <input type="text" id="endereco" placeholder="Digite seu endereço:">
+  <input type="text" id="nome" placeholder="Digite o seu nome:">
   <span> Clique em "CONTINUAR" para enviar seu pedido via Whatsapp!</span>
   </div>`
+  rodape = document.getElementById("rodape-modal")
+    rodape.innerHTML =`<button type="button" onclick="continuar()"><i class="fab fa-whatsapp"></i>Continuar</button>`
 }
   document.getElementsByClassName("corpo-modal")[0].innerHTML = msg
   modal.style.display = "block"
 
 
 })
+
+function continuar(){
+  nome=document.getElementById("nome")
+  if(nome.value=="" )
+  {
+    alert("Digite seu nome")
+  }
+}
+
+
 btFecharModal = document.getElementById("fechar-modal")
 btFecharModal.addEventListener("click", function () {
   modal = document.getElementById("modal-enviar")
   modal.style.display = "none"
 })
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+
 
 function escolherPasta(i, pasta) {
   lsProdutos[i].pasta = pasta
   console.log("escolher-pasta" + i, pasta)
 
 
+}
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 carregarProdutos();
 acc = document.getElementsByClassName("adicionais");

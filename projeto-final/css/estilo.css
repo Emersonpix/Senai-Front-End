@@ -402,8 +402,20 @@ td span {
     left: 0;
     top: 0;
     padding-top:100px;
-   
+    
 }
+.corpo-modal{
+    background-color: rgb(255, 254, 250);
+    width: 75%;
+    margin: auto;
+    padding: 15px;
+    position: relative;
+    text-overflow: scroll;
+    overflow-y: scroll ;
+   
+    
+}
+
 .titulo-modal{
     background-color: rgb(255, 217, 0);
     width: 75%;
@@ -422,14 +434,7 @@ td span {
 
 
 }
-.corpo-modal{
-    background-color: rgb(255, 254, 250);
-    width: 75%;
-    margin: auto;
-    padding: 15px;
-    position: relative;
-    
-}
+
 .rodape-modal{
     background-color: rgb(255, 217, 0);
     width: 75%;
@@ -469,4 +474,13 @@ td span {
     padding-right: 5px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.footer{
+    background-color: rgb(226, 230, 47);
+    margin-bottom: 0;
+    padding-bottom: 25px;
+}
+.criador{
+    margin-bottom: 0;
 }

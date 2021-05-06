@@ -142,9 +142,8 @@ function continuar() {
     fone = '5561991429941'
     nome = document.getElementById("nome").value
     endereco = document.getElementById("endereco").value
-    pedido = `Olá meu nome é *${nome}* desejo fazer o seguinte pedido:<br>
-    Pasta de: <br>` + pedido
-    pedido += (endereco != '')?` Meu endereço é: ${endereco}`:''
+    pedido = `Olá meu nome é *${nome}* desejo fazer o seguinte pedido:<br>` + pedido
+    pedido += (endereco != '')?`Pasta de: <br> Meu endereço é: ${endereco}`:''
 
     pedido = pedido.replaceAll('<br>', '\n')
     pedido = encodeURI(pedido)

@@ -372,6 +372,10 @@ h2 span {
     .valor-produto {
         font-size: 20px;
     }
+    
+    .criador{
+        margin-bottom: 35px;
+    }
 
 }
 
@@ -479,8 +483,8 @@ td span {
 .footer{
     background-color: rgb(226, 230, 47);
     margin-bottom: 0;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
 }
 .criador{
-    margin-bottom: 0;
+    margin-bottom: 35px;
 }

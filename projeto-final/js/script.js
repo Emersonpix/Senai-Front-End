@@ -170,9 +170,21 @@ function escolherPasta(i, pasta) {
 
 
 }
+function closePromo() {
+  close = document.getElementById("hightlight");
+  close.style.display = "none";
+}
+
+function openPromo() {
+  setTimeout(() => {
+      toOpen = document.getElementById("hightlight");
+      toOpen.style.display = "block";
+  }, 5000);
+}
 
 carregarProdutos();
 acc = document.getElementsByClassName("adicionais");
 carregaEvento(acc);
 acc = document.getElementsByClassName("item");
 carregaEvento(acc);
+openPromo();

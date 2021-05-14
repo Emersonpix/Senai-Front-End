@@ -376,6 +376,51 @@ h2 span {
     .criador{
         padding-bottom: 50px;
     }
+    #hightlight{
+        padding-right: 1rem;
+        padding-left: 1rem;
+        max-width: fit-content;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    .promo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .promo img {
+        width: 100%;
+        
+
+    }
+
+    .promo h4,h2, h5{
+        font-size: 60%;
+    } 
+
+    .promo h3 {
+        font-size: 80%;
+    }
+
+    .containerPromo {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #close-btn{
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .description{
+        margin-top: 0;
+        padding-bottom: 1rem;
+    }
 
 }
 
@@ -487,4 +532,72 @@ td span {
 }
 .criador{
     margin-bottom: 35px;
+}
+.description{
+    margin-top: 3rem;
+}
+#hightlight{
+    display: none;
+    position: fixed;
+    color: var(--white);
+    z-index: 2;
+    top: 25%;
+    text-align: center;
+    max-width: 50%;
+    max-height: fit-content;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: rgba(209, 198, 42, 0.966);
+    border-radius: 5rem;
+    box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.5);
+    
+}
+.promo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.promo h3{
+    color: var(--yellow);
+    font-size: 3rem;
+    text-transform:uppercase;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 1rem;
+ 
+}
+#close-btn{
+    border-style: none;
+    color: var(--white);
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: black;
+}
+
+#toClose-btn{
+    cursor: pointer;
+}
+.promo h4 ,h3, h5, span{
+    color: black;
 }

@@ -567,11 +567,7 @@ td span {
     padding-right: 1rem;
     padding-left: 1rem;
 }
-.promo h3{
-    color: var(--yellow);
-    font-size: 3rem;
-    text-transform:uppercase;
-}
+
 
 .description{
     display: flex;
@@ -592,12 +588,15 @@ td span {
     top: 2rem;
     font-size: 3rem;
     cursor: pointer;
-    color: black;
+    color: rgb(243, 20, 20);
+    font-family: 'anton';
 }
 
 #toClose-btn{
     cursor: pointer;
+    
 }
 .promo h4 ,h3, h5, span{
     color: black;
+    font-family: 'anton';
 }
